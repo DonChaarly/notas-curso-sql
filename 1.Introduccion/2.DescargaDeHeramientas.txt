@@ -1,0 +1,18 @@
+		MySql
+Desde Pagina MySql
+Se tiene diferentes versiones, nosotros descargamos la gratuita 
+Se tienen dos intaladores, uno que ya tienen todos los elementos y 
+   otro que descargara los elementos despues
+Ver curso para ver que opciones se eligieron la configuracion del intalador
+Roles en mysql
+	Usuario ROOT: Por defecto el servidor tiene un usuario con todos los permisos el cual es el usuaruio root
+Se tiene una opcion para que el servicio de mysql se configure como un servicio de windows con lo que siempre estar disponible
+	con lo cual se consumen varios recursos pero de no hacerlo asi se podria tener algunos errores
+Se puede tener problemas con las variables de entorno del sistema, ver video para arreglar
+
+
+	SQLite
+Desde la pagina SQLite.org (Se descarga el lenguaje SQLite)
+Se descargo tanto el programa como las utilidades o tools
+Desde SQLite studio (Se descarga el entorno de desarrollo)
+

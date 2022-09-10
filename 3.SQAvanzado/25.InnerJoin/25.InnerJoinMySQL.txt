@@ -1,0 +1,28 @@
+
+
+		INNER JOIN 
+
+Los inner join son la union de dos tablas mediante una condicion
+Se mostraran los resultados que se tengan en comun dependiendo la condicion 
+
+Los inner join son iguales a utilizar un comando WHERE pero se necesita otra notacion
+
+	SINTAXYS
+
+seleccion utilizando innerJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) INNER JOIN (Tabla con la que se unira) ON (condicion);					[INNER JOIN, ON]
+
+
+
+	EJEMPLO DE DIFERENCIA ENTRE WHERE Y INNER JOIN
+
+SELECT  Materias.Materia, Asignatura.Asignatura 
+FROM Materias, Asignatruas
+WHERE Materias.idMateria = Asignaturas.MateriaAsignatura;
+
+SELECT  Materias.Materia, Asignatura.Asignatura 
+FROM Materias
+INNER JOIN Asignatruas ON Materias.idMateria = Asignaturas.MateriaAsignatura;
+
+
+	

@@ -1,0 +1,17 @@
+	
+
+	NUEVA TABLA en MySQL y SQLite
+crear nueva tabla: CREATE TABLE (nombre tabla) ((atributo) (tipo de dato), (atributo2) (tipo de dato));
+	En MySql el tipo de dato si es varchar se le coloca entre parentesis el tamano del atributo ej. (30)
+	En SQLite el tipo de dato para texto es text pero se puede colocar tambien varchar tambien lo admite
+	En SQLite conviene colocar el nombre de la base de datos antes del nombre de la tabla, esto daba un eror al hacerlo, mejor no hacerlo jaja
+Ver atributos de la tabla: DESCRIBE TABLE (nombre tabla);
+
+
+	SELECCION EN TALBA en MySql y SQLite
+seleccionar todos los datos de la tabla: SELECT * FROM (nombre tabla);
+
+
+	INSERTAR REGISTRO EN TABLA
+Insertar algun registro en tabla: INSERT INTO (nombre tabla) VALUES ('(valor columna 1)', '(valor columna 2)',...)
+

@@ -1,0 +1,64 @@
+
+
+	TABLAS ISAM
+Las tablas ISAM fue un formato de tabla que se utilizaba
+Estas tablas eran tablas de acceso secuencial la cuales para ir a un indice tenian que empezar
+por el indice 1 o el primero que haya seguir con el dos y asi hasta llegar al indice indicado
+
+	TABLAS Memory:
+Almacena todos los datos en RAM para un acceso rapido
+Esta tabla casi no se utiliza
+
+------------------------------------- TABLAS InnoDB---------------------------------------------
+Este tipo de tablas son mejores para escritura
+Cuando se hace alguna insercion o actualizacion se bloquea solo una fila
+
+
+
+
+--------------------------------TABLAS MyISAM-------------------------------------------------------
+Estas tablas son mejores para Trabajos de solo lectura
+Cuando se hace alguan actualizacion se bloquea toda la tabla
+Cuando se crea una tabla de tipo MyISAM se crean dos archivos diferentes para la misma tabla
+Uno con extencion MYI y otro MYD, estos archivos establecen la estrucutra de la tabla y los indices
+para poder consultarlos de maneras diferentes y agilizar los procesos
+
+
+	VARIACIONES DE LAS TABLAS MyISAM
+
+TABLAS ESTATICAS
+	Los registros y columnas de estas tablas tiene el mismo tamano
+	osea que al ingresar un valor por ejemplo un varchar de solo 2
+	caracteres, lo que hara la tabla es agregar mas informacion para
+	alcanzar el valor que se le indico a la columna por ejemplo varchar 45
+	SINTAXIS
+		CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=COMPACT;							[ENGINE=MyISAM, ROW_FORMAT=COMPACT]
+TABLAS DINAMICAS
+	Intentan ajustar el tamano de los registros al menor posible
+	Es decir se intenta optimizar el tamano
+	SINTAXIS
+		CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=DYNAMIC;							[ENGINE=MyISAM, ROW_FORMAT=DYNAMIC]
+
+DIFERENCIAS
+	Las tablas estaticas son mas rapidas ya que no se optimiza nada
+	Las tablas dinamicas optimizan el tamano del almacenamiento pero
+		las vuelve mas lentas
+
+TABLAS COMPRMIMIDAS
+	Intentan compacatar los datos
+	SINTAXIS	
+		CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=COMPRESSED;						[ENGINE=MyISAM, ROW_FORMAT=COMPRESSED]
+
+
+---------------------------------------TABLAS MERGE ------------------------------------
+Permiten agrupar logicamente una serie de tablas MyISAM y hacer referencia a ellas
+como un solo objeto
+
+Esto es util cuando por ejemplo se tiene demasiada informacion en una tabla, con ello
+surge la necesidad de crear otra tabla para guardar mas informacion en ella
+y puede darse el caso de tener distintos servidores
+Con esto se pueden realizar consultas en varias tablas como si fueran una sola
+
+
+	SINTAXIS
+		CREATE TABLE (nombreTabla) (...) ENGINE Merge UNION = (Tabla1, Tabla2,...);					[ENGINE=Merge, UNION=(Tabla1, Tabla2,..)]

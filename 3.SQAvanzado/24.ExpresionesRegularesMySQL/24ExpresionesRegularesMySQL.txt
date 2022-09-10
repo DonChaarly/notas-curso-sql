@@ -1,0 +1,61 @@
+	
+		EXPRESIONES REGULARES
+
+Las expresiones regulares son descripciones de las caracteristicas que una cadena de caracteres 
+debe cumplir para ser valida
+
+	ej. Una direccion de correo electronico debe ser parecido a lo siguiente ejemplo@dominio.algo
+
+
+		EXPRESIONES REGULARES EN MySQL
+Condicion con expresion regular
+	SELECT (columnas) FROM (nombre Tablas) WHERE (columna) REGEXP '(expresion regular';				[REGEXP '(exp regular)']
+
+	
+	RANGOS DE CARACTERES EN EXPRESIONES REGULARES									[[x-x]]
+
+[0-9] --> Rango de 0 a 9
+
+	MAS DE UN RANGO DE CARACTERES													[[x-xy-y...]]
+
+[0-9A-Ja-j] --> Rango de 0 a 9 o A y J o a y j
+
+	MAS DE UN CARACTER DE UN TIPO O RANGOS											[+]
+
+[0-9]+ --> Uno o mas de un caracter del rango 0 a 9
+
+	CUANTIFICADOR DE CARACTERES														[{n}]
+
+[0-9]{3} --> Tres carcteres entre 0 y 9
+
+	RANGO DE CUANTIFICADORES														[{n,n}]
+
+[0-9]{4,7} --> De 4 a 7 caracteres entre el rango 0 y 9
+
+	CUANTIFICADOR * CERO O MAS VECES												[*]
+
+[0-9]* --> Que se repita cero o mas veces un caracteres entre el rango 0 a 9
+
+	CARACTER PARTE DE LA EXPRESION REGULARES										[caracter]
+
+[0-9]{2}/[0-9]{2}/[0-9]{4} --> Que se incluya el caracter / en la cadena en las posiciones indicadas para que sea valida
+
+
+	OPERADOR OR |																	[|]
+
+[0-3] | [5-7] --> Cualquier numero entre 0 y 3 o 5 y 7
+
+	PARENTESIS PARA SEPARACIN DE EXPRESIONES ()										[()]
+
+(KA_) | (K_) --> Cadena KA_ o la cadena K_
+
+	COMIENZO DE UNA CADENA															[^]
+
+^(A|B) --> Que se empiece con A o B
+
+
+
+Para probar expresiones regulares en linea: Buscar expresiones regulares online
+	https://regex101.com/
+	https://regexr.com/
+	https://www.regextester.com/

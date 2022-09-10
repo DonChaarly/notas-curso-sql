@@ -1,0 +1,28 @@
+
+
+		CLAVES FORANEAS DOBLES
+
+Hay ocasiones en las que una tabla puede tener dos o mas claves foraneas que apunten a la clave primaria de una misma tabla
+En estos casos es dificil hacer una seleccion estas dos columnas con claves foraneas ya que se puede apuntar a la misma columna de una tabla
+por ello es util emplear alias a las tablas
+
+		ALIAS DE TABLAS
+
+Se puede colocar un alias a una tabla para tratar a esta tabla como una copia de si misma 
+Con esto se soluciona el problema de las dos claves foraneas
+
+
+
+		SINTAXYS
+Colocar un alias a una tabla para tratarla como otra tabla
+	SELECT (AliasTabla.columna) FROM (nombre Tabla) (Alias Tabla);													[(tabla) (Alias)]
+Colcoar un alias a una tabla utilizando INNER JOIN
+	SELECT (columna) (AliasTabla.columna) FROM (nombre Tabla) INNER JOIN (nombre Tabla) AS (alis) ON (condicion);	[INNER JOIN (tabla) AS (alias)]
+
+
+
+
+		EJEMPLO DE ESTE CASO
+
+SELECT Especies.Nombre, Tipos.Nombre, TiposSecundario.Nombre FROM Especies, Tipos, Tipos TiposSecundario
+WHERE Especies.tipo1 = Tipos.idTipos AND Especies.Tipo2 = TiposSecundario.idTipos;

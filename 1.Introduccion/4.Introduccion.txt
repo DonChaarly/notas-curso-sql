@@ -1,0 +1,34 @@
+	Que es un servidor?
+Un servidor es realmente un programa comun que se dedica a escuchar las 
+peticiones que se le hacen y las cuales contesta ya sea como algun
+fichero html u otra cosa
+
+
+	Puerto Virtual
+Los puertos vituales funcionan como punteros los cuales forman parte de una estrucutra del sistema operativo 
+la cual esta numerada y cada numero apunta a un lugar concreto del sistema
+0 - 1023: Puertos reservados para uso comun
+			ej. puerto 80: Para conexiones a internet http
+				puerto 443: Para conexiones de internet https
+1024 - 49151: Semireservados
+				ej. puerto 3306: para MySQL
+49152 - 65535: Puntos efimeros, puntos que podemos crear nosotros
+
+
+	Cliente
+Un cliente es una aplicacion que enviara alguna peticion al servidor
+y esperara una respuesta
+
+
+
+	MySQL 
+Es un servidor el cual estar escuchando las peticiones
+del puerto 3306
+
+
+	SQLite
+No es un servidor por lo cual no monitorea ninguna peticion
+SQLite esta pensada para que otra aplicacion sea la que gestine estas peticiones
+y la base de datos se descargue completa en este sistema operativo
+
+

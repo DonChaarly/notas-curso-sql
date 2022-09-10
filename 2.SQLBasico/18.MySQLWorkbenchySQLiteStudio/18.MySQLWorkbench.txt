@@ -1,0 +1,111 @@
+
+		GENERAR UNA NUEVA CONEXION
+
+Se da click sobre el boton + de Conections
+	Se colocan los siguientes datos:
+Nombre de la conexion: Cualqueira que queramos
+Metodo de conexion: Normalmente se deja como esta 
+Servido o Hostname: Se deja como esta si es el servidor local, 127.0.0.1
+Puerto o Port: Se deja como esta si es el puerto local, 3306
+Usuario: Nombre que se le quiera colocar
+Contrasena: Si se da click en Store in vault nos permite dejar guardada la contrasena para conecatarnos automaticamente
+Base de datos por defect o Default Schema: Se puede indicar una base de datos por defecto para poder conectarse, normalmente no se coloca nada
+
+
+	BOTONES PARTE SUPERIOR
+Para crear un nuevo script o query: Create a new SQL tab
+Crear un Scrip antes guardado: Open SQL Script
+Abrir el inspector para el elemento seleccionado: Open Inspector
+Para crear una nueva base de datos: Create New Schema
+Para crear una nueva tabla en la base de datos seleccionad: Create a new table
+Crear una nueva vista: Create a new View
+Crear un nuevo procedimiento: Create a new stored Procedure
+crear una nueva funcion: Create a new Function
+
+
+
+	SECCIONES DE LAS BASES DE DATOS
+Al expandir la seccion de alguna base de datos se tiene diferentes cosas
+Tables: Son las tablas que contiene la base de datos
+Views: Las vistas que se han configurado para la base de datos
+Stored Procedures: Procedimientos creados para la base de datos
+Functions: Funciones que se crearon para la base de datos
+
+		
+		SECCION SCRIPT o QUERY
+Esta seccion es como una consola
+Al hacer doble click sobre una base de datos, todas las sentencias que se coloquen en Script
+se aplicaran para esa base de datos, es como usar Use (base de datos);
+Es muy util ya que nos acompleta las palabras y nos indica donde podemos tener un error,
+
+
+	EJECUTAR SENTENCIAS DEL SCRIPT
+Se tiene dos botones, Uno de un rayito y otro rayito pero con un signo de cursos
+El rayito ejecutar toas las sentencias en el script
+El rayito con el cursos ejecutar a partir de donde este el cursor hacia abajo
+
+
+
+	SECCION OUTPUT
+En esta parte se muestran los procedimientos que se han hecho y los errores que se han presentado
+
+
+	TABLAS DE LA BASE DE DATOS
+Al hacer click derecho sobre una tabla se muestran algunas opciones que se tiene
+como hacer una consulata del contenido de la tabla, alterar la tabla, crear una nueva tabla, eliminar tabla, etc.
+
+ Se puede editar directamente la informacion en previsualizacion de la tabla y aplicar los cambios haciendo click en apply
+ Se puede importar o exportar facilmente en la parte en la que se muestra la informacion de la tabla
+
+
+ 	CREACION DE TABLA CON LA INTERFAZ GRAFICA
+ Para crear una tabla se da click derecho sobre tables y CREATE TABLE
+ 	Se tienen los campos:
+ Table Name: Nombre de la tabla
+ Charset/Collation: El tipo de codificacion que se utilizara como por ejemplo utf8
+ Engine: Es el motor que se utilizara para crear la tabla
+ coments: Se puede agregar comentarios
+
+ Se tiene el campo de las columnas
+ 	Se tiene los datos
+ Column Name: Nombre de la columna
+ Datatype: Tipo de dato
+ PK: Llave primaria
+ NN: Not Null
+ UQ: Unique
+ B: Binaria o no
+ UN: Establecer si es sin signo
+ ZF: Para autorellenar la tabla
+ AI: Auto Incremental
+ G: Columna generada
+ Default/expresion: Colocar un valor por default que tendra la columna
+
+ En la parte inferior se tiene la pestana de foreign keys
+ 	Se coloca un nombre de la Foreign key para que se indexe mejor
+ 	la tabla a la que se esta referenciando
+ 	La columna a de la tabla que sera la llave foranea
+ 	Y la columna de la tabla referenciada
+
+ Finalmente en el botton apply se genera el codigo SQL que se utilizara el cual se puede modificar
+
+
+ 	INGENIERIA INVERSA CON MySql WorkBench
+ En la pestana superior de database se puede dar click en Reverse Engineer
+ 	Se coloca
+ El usuario que se utilizara
+ Se da click en next
+ Se da click en la base de datos que se seleccionara
+ Y se da next hasta execute
+ Con esto se generan las tablas de la base de datos
+
+
+        IMPORTACION Y EXPORTACION DE DATOS
+Al hacer select de cualquier tabla, en la seccion de la informacion de la tabla estan los botones de importacion y exportacion
+de iformacion
+Para la importacion:
+    Se busca la ruta del archivo a importar
+    Se puede crear una tabla nueva con la estuctura de la informacion del archivo
+    O se puede utilizar una tabla existente indicando a que tabla se agregara la informacion}
+Para exportacion:
+    Se da click sobre el boton de exportacion
+    Se guarda la exportacion de la tabla en la ruta que se queira

@@ -1,0 +1,42 @@
+	SELECCION POR COLUMNAS DE UNA TABLA
+
+		SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla);
+
+	ORDENAMIENTO DE REGISTROS EN UNA SELECCION
+
+		SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1), (condicion2),...;
+			se puede colocar tantas condiciones como se quiera por ejemplo, que se ordene primero por nombre y luego por apellido
+		Ordenar de forma descendente: 
+			SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1) DESC, (condicion2),... ;			[DESC]
+		Ordenar de forma ascendente: 
+			SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1) DESC, (condicion2) ASC,... ;		[ASC]
+
+	OBTENER LISTA DE VALORES SIN REPETIR
+
+		SELECT DISTINCT  (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1), (condicion2),...;
+
+
+	FILTAR POR CONDICIONES
+
+		Seleccionar por condicion: 
+			SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)';														[WHERE]
+		Seleccionar cumpliendo dos o mas condiciones: 
+			SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)' AND (nombreColumna) = '(valor)';						[AND]
+		Seleccionar cumpliendo alguna condicion: 
+			SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)' OR (nombreColumna) = '(valor)';						[AND]
+		Seleccinar cumpliendo un rango de valores con operadores <,>, <=, >=:
+			SELECT * FROM (nombreTabla) WHERE (nombreColumna) >= '(valor)';														[<,>, <=, >=]
+		Seleccinar en base a un valor que pueda ser parecido
+			SELECT * FROM (nombreTabla) WHERE (nombreColumna) LIKE '(valor)%';													[LIKE, %]
+
+	USO DE PARENTESIS EN CONDICIONES:
+
+		Se puede agrupar un conjunto de condiciones dentro de un parentesis: 
+			SELECT * FROM (nombreTabla) WHERE ((nombreColumna) = '(valor)' AND (nombreColumna)= '(valor)') OR (nombreColumna) = '(valor)';			[()]
+
+
+	ESTABLECER UN LIMITE DE REGISTROS A RECUPERAR:
+	
+		Seleccionar registro con un limite de registros:
+			SELECT * FROM (nombreTabla) LIMIT (valor);																			[LIMIT]
+

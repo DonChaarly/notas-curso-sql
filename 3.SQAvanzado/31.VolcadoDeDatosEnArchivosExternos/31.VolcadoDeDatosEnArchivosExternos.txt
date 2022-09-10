@@ -1,0 +1,26 @@
+
+
+		VOLCADO DE DATOS EN ARCHIVO EXTERNOS
+
+Un volcado de datos es un archivo por lotes como respaldo con todas las sentencias SQL para generar
+dicha base de datos con sus tablas y registros
+de forma que se pueda transoportar a otro lugar facilmente
+
+
+		SINTAXYS para MySQL
+Volcado de datos de toda una base de datos:
+	mysqldump -u (usuario) -p (baseDeDatos) > "(ruta con nombre de archivo a crear)"						[mysqldump]
+Volcado de datos de todas las bases de datos:
+	mysqldump -u (usaurio) -p --all-databases > "(ruta con nombre de archivo a crear)"						[mysqldump, --all-databases]
+Volcado de datos de bases de datos determinadas:
+	mysqldump -u (usaurio) -p --databases (db1) (db2) (db3).. > "(ruta con nombre de archivo a crear)"		[mysqldump, --databases]
+Volcado de datos de tablas en especifico de una base de datos
+	mysqldump -u (usaurio) -p (baseDeDatos) (tabla1) (tabla2)..> "(ruta con nombre de archivo a crear)"		[mysqldump, (baseDeDatos) (tablas)]
+
+
+		SINTAXYS para SQLite
+Volcado de datos en consola mostrnando las sentencias sql
+	.dump 																									[.dump]
+Volcado de datos en una archivo
+	.output "(ruta con nombre de archivo a crear)"															[.output]
+	.dump 																									[.dump] 

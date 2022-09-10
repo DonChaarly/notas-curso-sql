@@ -1,0 +1,35 @@
+
+	FUNCION AGREGADA
+
+Las funciones agregadas nos permiten hacer tareas de forma automatizada
+
+
+	FUNCIONES EN MySql
+
+https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
+
+	FUNCIONES EN SQLite
+
+https://www.sqlitetutorial.net/sqlite-aggregate-functions/
+
+
+	FUNCIONES PRINCIPALES
+
+Funcion count(): Nos permite contar registros
+	SELECT COUNT((columnas)) FROM (nombre tabla);																		[COUNT()]
+Funcion count() con DISTINCT: Nos devuelve el numero de registros sin repetir valores
+	SELECT COUNT(DISTINCT (nombreColumna)) FROM (nombre Tabla);															[COUNT(DISTINCT)]
+FUNCION count() con condicion:
+	SELECT COUNT((columnas)) FROM (SELECT (columnas) FROM (nombreTabla) WHERE (condicion)) AS (nombreAlias);			[(Seleccion), AS]
+Funcion grou by: Nos permite agrupar una busqueda de acuerdo a una Columna:
+	SELECT (columnas) FROM (nombre Tabla) GROUP BY (columna);															[GROUP BY]
+FUNCION max(): Nos retorna el valor maximo que hay en una columna
+	SELECT MAX((columna)) FROM (nombre Tabla);
+FUNCION min(): Nos retorna el valor minimo que hay en una columna
+	SELECT MIN((columna)) FROM (nombre Tabla);																			[MIN()]
+FUNCION sum(): Nos devuelve la suma de todos los valores de la columna que indiquemos
+	SELECT SUM((columna)) FROM (nombre Tabla);																			[SUM()]
+FUNCION sum() con DISTINCT: Nos devuelve la suma de todos los valores sin repetir
+	SELECT SUM(DISTINCT (columna)) FROM (nombre Tabla);																	[SUM(DISTINCT)]
+FUNCION avg(): Nos devuelve el promedio de los valores de la columna que indiquemos
+	SELECT AVG((columna)) FROM (nombre Tabla);																			[AVG()]

@@ -1,0 +1,22 @@
+Los tipos de datos hacen alucion al tipo de informacion que podemos guardar en una colmna
+
+
+Se tienen tipos de datos como
+varchar
+INT
+TINYINT
+BOOLEAN
+etc...
+
+En el pdf se detallan todos los tipos de datos
+
+
+Cuando un dato es unsigned o sin signo los valores que deberia tener para los negativos se recorren y pueden utilzarse para los positivos
+Es decir cuando por ejemplo un TINYINT alcanza valores del -128 a 127 normalmente
+	Cuando es Unsigned ahora podra alcanzar valores del 0 al 255
+
+
+En SQLite se tienen mucho menos tipos de datos que en MySql, 
+esto debido a que en SQLite los tipos de datos son dinamicos
+esto quiere decir que se establecen en el momento en el que se guarda
+informacion en la base de datos

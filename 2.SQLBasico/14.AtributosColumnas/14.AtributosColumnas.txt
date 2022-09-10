@@ -1,0 +1,28 @@
+
+---------------------------------- ATRIBUTOS DE COLUMNAS ----------------------------------------
+al crear o modificar un campo se le puede colocar atributos:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) (atributo1) (atributo 2), (nombreColumna1) (tipo de dato), ...);	[(atributo)]
+
+		CAMPO NULO
+Se impide a la tabla que algun dato de la columna pueda ser nulo, si esto pasa enviara un error
+Campo no nulo:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) NOT NULL);												[NOT NULL]
+
+		CAMPO AUTO INCREMENTAL
+Esta columna tendra valores auto incrementales, no hara falta proporcionar el dato de esta columna, la tabla le asignara el valor que toque
+Campo no auto incremental:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) NOT NULL AUTO_INCREMENTAL);							[AUTO INCREMENTAL]
+
+		CAMPO UNICO
+Se le indica que esta columna no puede tener valores repetidos
+Campo con valor unico:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) AUTO_INCREMENTAL UNIQUE);								[UNIQUE]
+
+
+		COMANDO IF NOT EXISTS
+Es util colocar el comando IF NOT EXIST al crear una tabla para que la tabla no se cree
+en caso de que ya exista, para que no se mande un error y pare la ejecucion de las
+siguientes posibles sentencias
+	CREATE TABLE IF NOT EXIST (nombre tabla) ....;																		[IF NOT EXIST]
+
+

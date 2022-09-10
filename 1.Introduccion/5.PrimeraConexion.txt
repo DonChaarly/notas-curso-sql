@@ -1,0 +1,39 @@
+La interfaz grafica Gasta recursos
+Por ello las empresas no emplean interfaz grafica
+Se trabaja por consola
+
+
+--------------------------------------------	MYSQL 	-----------------------------------------------------------
+	CONEXION A MYSQL DESDE CONSOLA
+			mysql -u root -p
+
+para conectarnos colocamos mysql
+con -u especificamos el usuario en este caso root
+con -p especificamos la contrasena, pero esta se escribe despues del enter para que no la vea nadie
+
+
+	CREACION DE NUEVO USUARIO MYSQL
+CREATE USER '(usuario)'@'(lugarDesdeDondeSeConectaElCliente o aplicacin)' IDENTIFIED BY '(contrasena)';
+
+
+	Otorgar todos los privilegios
+GRANT ALL PRIVILEGES ON '(bases de datos del usuario, *.* para otorgar a todas las bases de datos)' TO '(usuario)'@'lugarDelCliente)';
+
+	MOSTRAR BASES DE DATOS
+SHOW DATABASES;
+
+	CREAR BASE DE DATOS
+CREATE DATABASE (nombre de la base de datos);
+
+	USAR BASE DE DATOS
+USE (nombre);
+
+
+--------------------------------------------	SQLite 	-----------------------------------------------------------
+tenemos que dirigirnos a la carpeta donde se encuentre sqlite con: cd
+
+	CREAR BASE DE DATOS O CONTECTARSE A BASE DE DATOS
+sqlite3 (nombre de base).db
+
+	CERRAR BASE DE DATOS
+.quit

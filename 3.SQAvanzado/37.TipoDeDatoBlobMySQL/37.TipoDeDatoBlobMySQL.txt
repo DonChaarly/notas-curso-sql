@@ -1,0 +1,31 @@
+
+
+		Cuando se quiere hacer referencia a una imagen, gif o video se puede colocar como dato varchar
+		la ruta en donde se encuentra dicho archivo
+
+
+
+
+				TIPO DE DATO BLOB
+
+	Este tipo de dato nos permite guardar archivos como imagnes, gifs, videos etc dentro de la base de datos
+	Esto casi no se hace ya que hace que la base de datos se pese mucho, En cambio se opta por colocar simplemente
+	la ruta en donde se encutra el archivo 
+	Sin embargo esto es posible	
+
+		CONSIDERACIONES
+	El archivo se tiene que encontrar en un lugar al que MySQL pueda acceder
+	como la carpeta para cargar archivos masivos
+
+
+			INSERTAR UN TIPO DE DATO BLOB desde consola
+
+	Se utiliza la funcion Load_file() a la cual se le pasa como parametro la ruta en donde se encuentra el archivo
+
+	Ejemplo
+		UPDATE (nombre Tabla) SET (columna) = Load_file('(ruta en donde se encuntra)');											[Load_file()]
+
+
+
+			INSERTAR UNTIPO DE DATO BLOB desde workbench
+	Se da click derecho sobre el campo y se da click en Load Value From File

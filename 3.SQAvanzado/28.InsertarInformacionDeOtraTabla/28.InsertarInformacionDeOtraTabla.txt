@@ -1,0 +1,22 @@
+
+			HACER UNA INSERCION DE DATOS DE UNA TABLA A OTRA DEPENDIENDO DE UNA CONSULTA
+
+Se pueden copiar los datos de una tabla e insertarlos en los campos de otra tabla
+Esto se hace medianete un INSERT INTO y un SELECT
+
+	Cosas a tener en cuenta:
+
+La tabla resultante de la consulta debe tener campos compatibles con los datos que se deben insertar
+Los campos se van a insertar en el orden en que se seleccionan en la consulta
+
+		SINTAXYS
+Copiar datos de una tabla e insertarlos en otra:
+	INSERT INTO (nombre Tabla) (columnas) SELECT (consulta);											[INSERT INTO, SELECT]
+
+
+	EJEMPLO DE UNA INSERCION DE DATOS DE OTRA TABAL
+
+INSERT INTO materiasyasignaturas (Materia, Asignatura) 
+SELECT Materias.Materia, Asignaturas.asignatura
+FROM Materias, Asignaturas
+WHERE Materias.idMateria = Asignaturas.MateriaAsignatura;

@@ -1,0 +1,45 @@
+
+
+
+			Indices
+
+Los indices nos ayudan a agilizar las busqudas en las tablas
+Las busquedas realizadas sobre campos que nos son claves primarias o unicos seran ineficientes
+
+
+FORMAS DE ORDENACION DE DATOS EN TABLAS
+
+		BIPARTICIO
+	Se ordenan los indices y cuando se hace una consulta o insecion de un indice empieza buscnado por la mitad,
+	dependiendo si el numero es mas chico que el numero en la mitad, se decanta por buscar a la derecha o izquierda
+	descartando la otra mitad, asi hasta llegar al objetivo
+
+		ARBOL BINARIO DE BUSQUEDA (BTREE)
+
+	Se tiene un elemento que vincula a otros dos elementos, uno a la izquierda y otro a la derecha
+	Un valor menor del elemento que vincula se inserta a la izquierda, uno mayor a la derecha
+	y de esta forma con los siguientes elemento
+
+
+			TIPOS DE INDICES 
+
+PRIMARY KEY: El primer tipo de indice en la mayoria de motores SQL es la llave primaria
+Doble PRIMARY KEY: Se puede indicar a mas de una columna como clave primaria
+	En los registros puede duplicarse el valor de una columna o mas pertenecientes a la clave primaria
+	Pero nunca se puede duplicar el valor de todas las columnas que conforman la clave primaria
+	Sintaxys:
+		CREATE TABLE (nombre Tabla) (columnas), PRIMARY KEY (columna1, columna 2, ...);							[PRIMARY KEY (columna1, columna2,...)]
+Campos UNIQUE: Aunque los campos marcados como UNQUE no son claves primarias, la base de datos arma un arbol para este campo tambien
+	porque estos valoers no se van a repetir
+FOREGIN KEY: la base de datos arma tambien un BTREE par las claves foraneas ya que estas tampoco se repiten 
+INDICES IMPLICITOS: Se pueden crear indices indicando implicitamente el comando INDEX y las columnas que seran parte de este indice
+	Sintaxys para mysql:
+		CREATE TABLE (nombre Tabla) (Columnas), INDEX (nombre Index) ((columnas));													[INDEX]
+	Sintxys para sqlite:
+		CREATE INDEX (nombre Indice) ON (nombre Tabla) ((columnas));														[CREATE INDEX]
+FULLTEXT: Se hace un indice basado en las cadenas string de un campo
+	Este tipo de indice es muy demandante para la base de datos pero es util para cuando se quiere buscar alguna palabra en especifico 
+	Para hacer uso de este indice fulltext se utiliza la funcion Match AGAINST 
+	Sintaxys: 
+		CREATE TABLE (nombre Tabla) (Columnas), FULLTEXT ((columna));																[FULLTEXT]
+		SELECT (columnas) FROM (nombre Tabla) WHERE Match (columnaFullText) AGAINST ('palabra o valor');							[Match(), AGAINST()]

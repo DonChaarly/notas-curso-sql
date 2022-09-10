@@ -1,0 +1,18 @@
+
+
+	LEFT JOIN Y RIGHT JOIN
+
+Es lo mismo que un INNER JOIN ya que en la consulta se mostrara los datos en comun de ambas tablas
+dependiendo de la condicion que se coloque, sin embar en el LEFT JOIN se mantendran tambien los datos de
+la tabla de la izquierda, osea de la primera que se coloque, tengan o no vinculo con la segunda tabla
+Y en el RIGHT JOIN se mantendran los datos de la tabla a la derecha, osea la utlima que se coloque
+
+
+
+	SINTAXYS
+
+seleccion utilizando LeftJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) LEFT JOIN (Tabla con la que se unira) ON (condicion);			[LEFT JOIN, ON]
+seleccion utilizando RightJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) RIGHT JOIN (Tabla con la que se unira) ON (condicion);			[RIGHT JOIN, ON]
+

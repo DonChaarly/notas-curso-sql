@@ -1,0 +1,43 @@
+
+
+
+		CLICLO DE VIDA DE UNA BASE DE DATOS
+
+
+	1. ANALISIS: 
+		Es cuando un cliente se acerca a proponer un proyecto
+		y se tiene que escuchar los requerimientos del cliente
+		para despues bajar estos requerimientos a tierra
+		para poder luego empezar a disena la bae de datos
+		El analisis es independiente del programa, de la implementacion
+	2. DISEÑO:
+		El diseño es independiente de la implementacion
+		En esta parte no se piensa si se utilizara MySQL o SQLite
+		ni el motor que se va a utilizar
+		En el diseño se busca entender cuales son las partes
+		que tendra la base de datos
+			ENTIDADES: Se identifican las entidades, osea las tablas que compondran la base de datos
+			ATRIBUTOS: Se identifcan los atributos que tendran dichas entidades, osea los campos de las tablas
+			RELACIONES, INDICES: Se identifica las relacines entre las tablas, no tanto pensando en claves sino solo en la relacion
+	3. IMPLEMENTACIN:
+		Es cuando ya se decidio que base de datos se va a utilizar
+		Esto se condiciona mas que por el diseño, por los recursos que se tienen
+		Se empieza a implementar la base de datos como se diseño pero adaptandolo
+		al tipo de base de datos que se este ocupando
+			SUBPROGRAMAS:Se determina si habran procedimientos y funciones almacenadas
+			Disparadores Se determina si habran triggers
+	4. PRUEBAS
+		Se deben realizar pruebas para detectar errores y para 
+		verificar que todo esta funcionando bien
+		Se detecta todos  los errores posibles
+	5. MANTENIMIENTOS:
+		Consta de analisas que informacion hay
+		quitar informacion redundante
+		Ver hasta donde crecieron las tablas
+		Se tiene funciones utiles como:
+			<Optimize>
+			<Analyze>
+			<Restore>
+			<Revoke>
+		Se debe constantemente estar monitoreando esto
+		haciendo respaldos de la informacion

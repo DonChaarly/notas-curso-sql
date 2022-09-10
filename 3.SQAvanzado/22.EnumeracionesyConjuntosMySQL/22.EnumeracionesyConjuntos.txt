@@ -1,0 +1,48 @@
+	
+
+		VALORES ENUM
+
+Los enum son listas de valores que puede aceptar la tabla a la que se le aplica este tipo de valor
+
+A todos los valores contenidos en una enumeracion se les asigna un indice
+Con esto es posible en vez de colocar el valor explicitamente que queramos que tenga un registro al hacer una insercion,
+Se puede colocar simplemente el indice del valor y con esto el registro tendra el valor que correponde al indice indicado
+
+En el ejemplo siguiente el valor1 tendra indice 1, valor2 indice 2 y asi sucesivamente
+
+
+		SINTAXYS
+	Tipo de valor ENUM:
+		CREATE TABLE  (nombre Tabla) ((columna1) (tipoValor), (columna2) ENUM('(valor1', '(valor2)', '(valor3)',...),..):			[ENUM()]
+
+	insercion con un valor del ENUM;
+		INSERT INTO (nombre Tabla) (columna) VALUES ('(valor1)');																	[INSERT, ('(valor1)')]
+	insercion con el indice de un valor del ENUM:
+		INSERT INTO (nombre Tabla) (columna) VALUES ('(indice)');																	[INSERT, ('(indice)')]
+
+
+
+	VALORES SET o Conjuntos
+
+Los SET son iguales a los ENUM sin embargo, al insertar informacion en una columna, se puede colocar mas de un valor
+al mismo tiempo
+
+	Ejempolo de insercino con mas de un valor
+
+
+		SINTAXYS
+	Tipo de valor SET:
+		CREATE TABLE  (nombre Tabla) ((columna1) (tipoValor), (columna2) SET('(valor1', '(valor2)', '(valor3)',...),..):		[SET()]
+
+	insercion con un valor del SET;
+		INSERT INTO (nombre Tabla) (columna) VALUES ('(valor1)');																[INSERT, ('(valor1)')]
+	insercion con el indice de un valor del SET:
+		INSERT INTO (nombre Tabla) (columna) VALUES ('(indice)');																[INSERT, ('(indice)')]
+	insercion de mas de un valor del SET:
+		INSERT INTO (nombre Tabla) (columna) VALUES ('(valor1, valor2,...)');													[INSERT, ('(valor1, valor2,..')]
+
+
+
+
+
+

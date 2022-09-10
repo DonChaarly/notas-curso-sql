@@ -1,0 +1,20 @@
+		Definicion de SQL
+
+SQL = Structured Query Lenguage o Lenguaje de consulta estrucutrada
+
+
+		MySQL y SQLite
+Son heramientas de desarrollo las cuales se basan o utilizan el lenguaje SQL
+pero agregando algunas cosas para diferenciarse de los demas y mejorar algunas cosas
+
+
+		REGISTROS
+Los registros son cada uno de las filas de datos de la base de datos
+
+
+		TIPOS DE DATOS
+	MySQL
+varchar: Es para texto
+
+	SQLite
+text: Es para texto

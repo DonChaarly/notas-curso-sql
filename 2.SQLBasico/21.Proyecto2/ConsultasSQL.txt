@@ -1,0 +1,26 @@
+SELECT Especies.Nombre AS Especie, Pokemon.Mote, Pokemon.Nivel FROM Especies, Pokemon WHERE Especies.idEspecies=Pokemon.Especie;
+
+SELECT Especies.Nombre As Especie, Pokemon.Mote, Movimientos.Nombre AS Movimiento, Ataques.PPActual FROM Especies, Pokemon, Movimientos, Ataques
+	WHERE Especies.idEspecies=Pokemon.Especie AND Ataques.Movimiento=Movimientos.idMovimientos AND Pokemon.idPokemon=Ataques.Pokemon;
+
+SELECT Especies.Nombre AS Especie, Pokemon.Mote, Movimientos.Nombre AS Movimiento, Ataques.PPActual, Estados.Estado FROM Especies, Pokemon, Movimientos, Ataques, Estados
+	WHERE Especies.idEspecies=Pokemon.Especie AND Ataques.Movimiento=Movimientos.idMovimientos 
+    AND Pokemon.idPokemon=Ataques.Pokemon AND Pokemon.Estado = Estados.idEstados;
+    
+SELECT Especies.Nombre AS Especie, Pokemon.Mote, Tipos.Nombre AS Tipo1 FROM Pokemon, Especies, Tipos
+	WHERE Especies.idEspecies=Pokemon.Especie AND Especies.Tipo1=Tipos.idTipos;
+
+SELECT Especies.Nombre AS Especie, Tipos.Nombre AS Tipo1 FROM Especies, Tipos
+	WHERE Especies.Tipo1 = Tipos.idTipos;
+
+SELECT Especies.Nombre AS Especie, Tipos.Nombre AS Tipo1, Tipostemporal.Nombre AS Tipo2 FROM Especies, Tipos, 
+	(SELECT  Tipos.Nombre FROM Tipos) AS Tipostemporal
+	WHERE Especies.Tipo1 = Tipos.idTipos AND Especies.Tipo2 = Tipos.idTipos ORDER BY Especies.Nombre;
+
+SELECT Tipos.Nombre, Cuenta.count FROM Tipos, (SELECT Especies.Tipo1, COUNT(*) as count FROM Especies GROUP BY Especies.Tipo1) AS Cuenta
+	WHERE Cuenta.Tipo1 = Tipos.idTipos;
+
+
+SELECT Especies.Nombre, Especies2.Nombre, Pokemon.Nivel FROM Pokemon, EvolucionesPorNivel, Especies, 
+(SELECT Especies.idEspecies, Especies.Nombre FROM Especies) As Especies2
+	WHERE Pokemon.Especie = EvolucionesPorNivel.Preevolucion AND Especies.idEspecies = Pokemon.Especie AND Especies2.idEspecies = EvolucionesPorNivel.Evolucion;

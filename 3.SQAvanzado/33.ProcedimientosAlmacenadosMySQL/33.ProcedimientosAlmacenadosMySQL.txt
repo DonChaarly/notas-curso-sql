@@ -1,0 +1,60 @@
+
+
+			PROCEDIMIENTOS ALMACENADOS
+
+	Como su nombre lo indica son procedimientos, osea sentencias SLQ que se guardan bajo un nombre
+	y pueden ejecutarse las veces que se quiera llamando a este nombre
+	Es lo mismo que las funciones en programacion
+
+			CONSIDERACIONES
+	Los procedimientos son como transacciones, hasta que no terminan no hay cambios en la tabla
+	por ello no se pueden crear variables temporales mediante SELECT, se debe utilizar SET
+	Se debe establecer antes un nuevo delimitador, ya que se pretende utilizar punto y coma ;
+	dentro de las instrucciones
+	No se pueden bloquear tablas dentro de los procedimientos
+
+
+			SINTAXYS
+	Establecer nuevo delimitador
+		DELIMITER (delimitador, ej. //)																						[DELIMITER]
+	Crear procedimiento:
+		CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) ()															[CREATE PROCEDURE]
+	Crear procedimiento con entradas:
+		CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (IN (entrada) (tipo dato), IN (entrada) (tipo Dato),...,)		[CREATE PROCEDURE, IN]
+	Crear procedimiento con salida:
+		CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (OUT (salida) (tipo dato))									[CREATE PROCEDURE, OUT]
+	Crear procedimiento con un parametro de salida entrada:
+		CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (INOUT (salida) (tipo dato))									[CREATE PROCEDURE, INOUT]
+	Guardar dato a salida de procedimiento
+		SELECT (columna, ej count()) INTO (salida) FROM ...;																[INTO]
+    Iniciar Procedimiento:
+		BEGIN																												[BEGIN]
+	Declarar un parametro interno
+		DECLARE (nombreParametro) (tipoDeDat);																				[DECLARE]
+	Terminar procedimiento:
+		END;																												[END]
+	Llamar a un procedimiento
+		CALL (nombre procedimiento) ((entradas o salidas))																	[CALL]
+
+
+			EJEMPLO DE PROCEDIMIENTO CON ENTRADAS
+
+	DELIMITER //
+	CREATE PRODCEDURE bancodb.insertar_cliente(IN documentoC VARCHAR(15), IN nombreC VARCHAR(15),
+											   IN apellidoC VARCHAR(15), IN numeroCuentaC INT,
+											   IN montoC DECIMAL(10,2))
+    BEGIN
+    	INSERT INTO Clientes(Documento, Nombre, Apellido) VALUES (documentoC, nombreC, apellidoC);
+    	SET @idNuevoCliente = LAST_INSERT_ID();
+    	INSERT INTO CuentaCliente (Numero, idCliente, Monto) VALUES (numeroCuentaC, @idNuevoCliente, montoC);
+    END //
+    DELIMITER ;
+
+    		EJEMPLO DE PROCEDIMIENTO CON SALIDAS
+
+	DELIMITER //
+	CREATE PRODCEDURE contar_especies (OUT cantidad INT)
+    BEGIN
+    	SELECT COUNT(*) INTO Cantidad FROM Especies;
+    END //
+    DELIMITER ;

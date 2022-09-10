@@ -1,0 +1,38 @@
+CREATE  TABLE IF NOT EXISTS Estados(
+	idEstados INTEGER NOT NULL PRIMARY KEY,
+    Estado TEXT);
+    
+INSERT INTO Estados VALUES 
+	(1, 'Paralizado'),
+    (2, 'Quemado'),
+    (3, 'Envenenado'),
+    (4, 'Gravemente envenenado'),
+    (5, 'Dormido'),
+    (6, 'Congelado'),
+    (7, 'Porkerus'),
+    (8, 'Debilitado');
+
+CREATE TABLE IF NOT EXISTS Pokemon (
+	idPokemon INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Especie INTEGER NOT NULL,
+    Mote TEXT,
+    Nivel INTEGER NOT NULL,
+    SaludMax INTEGER NOT NULL,
+    SaludActual INTEGER NOT NULL,
+    Ataque INTEGER NOT NULL,
+    Defensa INTEGER NOT NULL,
+    AtaqueEs INTEGER NOT NULL,
+    DefensaEs INTEGER NOT NULL,
+    Velocida INTEGER NOT NULL,
+    Experiencia INTEGER NOT NULL,
+    Objeto INTEGER,
+    Estado INTEGER,
+    FOREIGN KEY (Objeto) REFERENCES Items(idItems),
+    FOREIGN KEY (Estado) REFERENCES Estados(idEstados));
+
+CREATE TABLE IF NOT EXISTS Ataques (
+	idAtaques INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Pokemon INTEGER NOT NULL,
+    Movimiento INTEGER NOT NULL,
+    PPMax INTEGER,
+    PPActual INTEGER);

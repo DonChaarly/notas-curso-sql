@@ -1,0 +1,21 @@
+----------------------------------- MODIFICAR REGISTROS --------------------------------------------------------------
+
+Modificar todos los registros de una columna
+	UPDATE (nombre Tabla) SET (columna) = (valor);																		[UPDATE, SET]
+Modificar con una condiciones
+	UPDATE (nombre Tabla) SET (Columna) = (valor) WHERE (columna) = '(valor)' AND (columna) = '(valor)';				[UPDATE WHERE, AND OR <, etc]
+
+
+--------------------------------- ELIMINAR INFORMACION ------------------------------------------------------------------
+Eliminar todos los registros de la tabla
+	DELETE FROM (nombre Tabla);																							[DELETE]
+Eliminar una tabla
+	DROP TABLE (nombre Tabla);																							[DROP TABLE]
+Eliminar base de datos
+	DROP DATABASE (nombre Base De Datos); 																				[DROP DATABASE]
+Eliminar registros de una tabla
+	DELETE FROM (nombre Tabla) WHERE (columna) = '(valor)';																[DELETE, WHERE]
+
+
+
+En SQLite no existe comando para eliminar base de datos ya que este es un simple archivo que puede ser eliminado desde el sistema operativo

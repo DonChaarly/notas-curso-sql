@@ -1,0 +1,31 @@
+	
+	MODIFICAR LA ESTRUCUTRA DE UNA TABLA
+
+
+	AGREGAR COLUMNA
+
+Agregar una nueva columna
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato);												[ALTER TABLE, ADD]
+Agregar columna en lugar especifico
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato) AFTER (columna);								[ALTER TABLE, AFTER]
+
+
+	MODIFICAR EL NOMBRE DE LA TABLA
+
+Cambiar nombre de tabla:
+	ALTER TABLE (nombre TAbla) RENAME TO  (nuevo nombre);																[RENAME TO]
+
+	ELIMINAR COLUMNA
+
+Eliminar alguna columna
+	ALTER TABLE (nombre Tabla) DROP COLUMN (columna1), (columna 2), ...;												[DROP COLUMN]
+
+
+	RENOMBRAR COLUMNA
+
+Renombrar columna:
+	ALTER TABLE (nombre Tabla) RENAME COLUMN (columna) TO (nuevo nombre Columna);										[RENAME COLUMN, TO]
+
+	MODIFICAR COLUMNA
+Modificar tipo de dato de columna:
+	ALTER TABLE (nombre Tabla) MODIFY COLUMN (columna) (nuevo tipo de dato);											[MODIFY COLUMN]

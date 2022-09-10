@@ -1,0 +1,719 @@
+1, AbomasnowIta,-1,-1,Clave
+2, Abono brote,200,100,Estandar
+3, Abono del TMV,-1,-1,Clave
+4, Abono fertIl,-1,100,Estandar
+5, Abono fIjador,200,100,Estandar
+6, Abono fructIfero,-1,100,Estandar
+7, Abono InsolIto,-1,100,Estandar
+8, Abono lento,200,100,Estandar
+9, Abono rapIdo,200,100,Estandar
+10, Abono sorpresa,-1,100,Estandar
+11, AbsolIta,-1,-1,Clave
+12, AcromaquIna,-1,-1,Clave
+13, AerodactylIta,-1,-1,Clave
+14, Aerostal Z,-1,-1,Clave
+15, AggronIta,-1,-1,Clave
+16, Agua fresca,200,1001,Estandar
+17, Agua mIstIca,-1,50,Estandar
+18, AlakazamIta,-1,-1,Clave
+19, Ala arcoIrIs,-1,-1,Clave
+20, Ala plateada,-1,-1,Clave
+21, Alo-RaIstal Z,-1,-1,Clave
+22, AltarIanIta,-1,-1,Clave
+23, ambar vIejo2,-1,500,Estandar
+24, AmpharosIta,-1,-1,Clave
+25, Amuleto,-1,100,Estandar
+26, Amuleto captura,-1,-1,Clave
+27, Amuleto emblema,-1,-1,Clave
+28, Amuleto experIencIa,-1,-1,Clave
+29, Amuleto IrIs,-1,-1,Clave
+30, Amuleto oval,-1,-1,Clave
+31, anfora,-1,50,Estandar
+32, AntIderretIr,-1,50,Estandar
+33, AntIdoto,100,50,Estandar
+34, AntIhIelo,250,125,Estandar
+35, AntIquemar,250,125,Estandar
+36, AntIparalIzador,200,100,Estandar
+37, Arca de Zygarde,-1,-1,Clave
+38, Arena fIna,-1,50,Estandar
+39, Ash-PIkastal Z,-1,-1,Clave
+40, Ataque especIal X4,350,175,Estandar
+41, Ataque X,250,125,Estandar
+42, AudInIta,-1,-1,Clave
+43, Autografo,-1,-1,Clave
+44, Autografo grupo,-1,-1,Clave
+45, Banda atadura,-1,100,Estandar
+46, Banda focus,-1,100,Estandar
+47, Banda recIa,-1,1500,Estandar
+48, BanettIta,-1,-1,Clave
+49, BarrIta plus,-1,1006,Estandar
+50, BeedrIllIta,-1,-1,Clave
+51, BIcIcleta,-1,-1,Clave
+52, BIcI acrobatIca,-1,-1,Clave
+53, BIcI carrera,-1,-1,Clave
+54, Blanco,-1,100,Estandar
+55, BlastoIsIta,10000,-1,Clave
+56, BlazIkenIta,-1,-1,Clave
+57, Bloc amIgos,-1,-1,Clave
+58, Bloc Unown,-1,-1,Clave
+59, Bola de humo7,-1,100,Estandar
+60, Bola de nIeve,-1,2.000,Estandar
+61, Bola ferrea,-1,100,Estandar
+62, Bola lumInosa8,-1,50,Estandar
+63, Boleto Handsome,-1,-1,Clave
+64, Bolsa sellos,-,-,Estandar
+65, Bombona Devon,-1,-1,Clave
+66, Bono bIcI,-1,-1,Clave
+67, Botas gruesas,-1,2000,Estandar
+68, Bote polvos,-1,-1,Clave
+69, Boton escape,-1,100,Estandar
+70, Brazal,-1,100,Estandar
+71, Brazal fIrme,-1,1500,Estandar
+72, Brazal galanuez,-1,1500,Estandar
+73, Brazal recIo,-1,1500,Estandar
+74, Buscamontura,-1,-1,Clave
+75, Buscapelea,-1,-1,Clave
+76, Cadena roja,-,-,Estandar
+77, Caja bongurI,-1,-1,Clave
+78, Caja corazon,-1,-1,Clave
+79, Caja de InsIgnIas,-1,-1,Clave
+80, Caja sellos,-1,-1,Clave
+81, CalcIo,9800,4900,Estandar
+82,  Caña,-1,-1,Clave
+83, Caña buena,-1,-1,Clave
+84, Caña vIeja,-1,-1,Clave
+85, Camara lucha,-1,-1,Clave
+86, CameruptIta,-1,-1,Clave
+87, Campana alIvIo,-1,50,Estandar
+88, Campana clara,-1,-1,Clave
+89, Campana concha,-1,100,Estandar
+90, Campana oleaje,-1,-1,Clave
+91, Capsula candado,-1,-1,Clave
+92, Capsula habIlIdad,-1,5000,Estandar
+93, Caramelo DInamax,-1,-1,Clave
+94, Caramelo raro,-1,2400,Estandar
+95, Caramelo furIa9,-19,-19,Estandar
+96, Carburante,9800,4900,Estandar
+97, Carbon,-110,4900,Estandar
+98, Carne socIo,-1,-1,Clave
+99, Carta,-1,-1,Clave
+100, Carta acero,50,25,Estandar
+101, Carta aerea,50,25,Estandar
+102, Carta ajada,-1,-1,Clave
+103, Carta brIllo,50,25,Estandar
+104, Carta corazon,50,25,Estandar
+105, Carta fabulosa,50,25,Estandar
+106, Carta flores,50,25,Estandar
+107, Carta fuego,50,25,Estandar
+108, Carta hIerba,50,25,Estandar
+109, Carta Imagen,50,25,Estandar
+110, Carta Iman,50,25,Estandar
+111, Carta madera,50,25,Estandar
+112, Carta mIna,50,25,Estandar
+113, Carta mosaIco,50,25,Estandar
+114, Carta naranja,50,25,Estandar
+115, Carta nIeve,50,25,Estandar
+116, Carta ola,50,25,Estandar
+117, Carta pared,50,25,Estandar
+118, Carta pompas,50,25,Estandar
+119, Carta profesor,-1,-1,Clave
+120, Carta pr. Oak,-1,-1,Clave
+121, Carta puerto,50,25,Estandar
+122, Carta retro,50,25,Estandar
+123, Carta sIderal,50,25,Estandar
+124, Carta sombra,50,25,Estandar
+125, Carta sueño,50,25,Estandar
+126, Carta tropIcal,50,25,Estandar
+127, Casco dentado,-1,1000,Estandar
+128, Catalogo Rotom,-1,-1,Clave
+129, Chaleco asalto,-1,500,Estandar
+130, Chapa dorada,-1,5000,Estandar
+131, Chapa plateada,-1,2500,Estandar
+132, CharIzardIta X,10000,-1,Clave
+133, CharIzardIta Y,10000,-1,Clave
+134, CenIza sagrada,-1,100,Estandar
+135, CInta elegIda,-1,50,Estandar
+136, CInturon negro,-1,50,Estandar
+137, CInta focus,-1,100,Estandar
+138, CInta fuerte,-1,100,Estandar
+139, CInta experto,-1,100,Estandar
+140,CInta lunares,-1,50,Estandar
+141, CInto recIo,-1,1500,Estandar
+142, Cola ahumada,2200,1100,Estandar
+143, Cola plumbea,-1,100,Estandar
+144, Cola SkItty,1000,500,Estandar
+145, Cola Slowpoke,9800,4900,Estandar
+146, ColmIllagudo,-1,1050,Estandar
+147, ColmIllo dragon,-1,50,Estandar
+148, Concha cardumen,-1,10,Estandar
+149, ConfIte corazon,-1,250,Estandar
+150, ConfIte estrella,-1,250,Estandar
+151, ConfIte flor,-1,250,Estandar
+152, ConfIte fresa,-1,250,Estandar
+153, ConfIte fruto,-1,250,Estandar
+154, ConfIte lazo,-1,250,Estandar
+155, ConfIte trebol,-1,250,Estandar
+156, Corazon dulce,50,50,Estandar
+157, Corona antIgua,-1,300,Estandar
+158, Corona galanuez,-1,3000,Estandar
+159, Correo Oak,-1,-1,Clave
+160, Craneo dragon,-1,-1,Clave
+161, Crepe LumInalIa,200,100,Estandar
+162, CrIn blanca,-1,-1,Clave
+163, CrIn negra,-1,-1,Clave
+164, CrIoROM,-1,2900,Estandar
+165, CrIostal Z,-1,-1,Clave
+166, CrIstal DInamax,-1,10,Estandar
+167, CrIstal Z (LIam),-1,-1,Clave
+168, Cubresuelos,-1,2000,Estandar
+169, Cuchara torcIda,-1,50,Estandar
+170,Cuerda huIda,550,275,Estandar
+171, Cupon 1,-1,-1,Clave
+172, Cupon 2,-1,-1,Clave
+173, Cupon 3,-1,-1,Clave
+174, Cura total,600,300,Estandar
+175, CurrI de bote,950,475,Estandar
+176, Defensa especIal X,350,175,Estandar
+177, Defensa X,550,275,Estandar
+178, Despertar,250,125,Estandar
+179, Detector Devon,-1,-1,Clave
+180, DIamansfera,-1,5000,Estandar
+181, DIancIta,-1,-1,Clave
+182, DIarIo,-1,-1,Clave
+183, DIente marIno,-1,100,Estandar
+184, DIentes oro,-1,-1,Clave
+185, DIsco extraño,-1,1050,Estandar
+186, DIrecto,650,325,Estandar
+187, DIsco acero,-1,500,Estandar
+188, DIsco agua,-1,500,Estandar
+189, DIsco bIcho,-1,500,Estandar
+190, DIsco dragon,-1,500,Estandar
+191, DIsco electrIco,-1,500,Estandar
+192, DIsco fantasma,-1,500,Estandar
+193, DIsco fuego,-1,500,Estandar
+194, DIsco hada,-1,500,Estandar
+195, DIsco hIelo,-1,500,Estandar
+196, DIsco lucha,-1,500,Estandar
+197, DIsco planta,-1,500,Estandar
+198, DIsco psIquIco,-1,500,Estandar
+199, DIsco roca,-1,500,Estandar
+200, DIsco sInIestro,-1,500,Estandar
+201, DIsco tIerra,-1,500,Estandar
+202, DIsco veneno,-1,500,Estandar
+203, DIsco volador,-1,500,Estandar
+204, DracofosIl,-1,2.500,Estandar
+205, Dracostal Z,-1,-1,Clave
+206, Dueyestal Z,-1,-1,Clave
+207, Dulce de nata,-1,1.050,Estandar
+208, DuralIum,-1,10,Estandar
+209, Eeveestal Z,-1,-1,Clave
+210, ElectrIzador,-1,1050,Estandar
+211, Electrostal Z,-1,-1,Clave
+212, ElIxIr,1500,750,Estandar
+213, ElIxIr maxImo,-1,2250,Estandar
+214, Emblema Kalos,-1,-1,Clave
+215, Entrada para dos,-1,-1,Clave
+216, EnvIo,-1,-1,Clave
+217, Escama bella,-1,250,Estandar
+218, Escama corazon,-1,50,Estandar
+219, Escama marIna,-1,100,Estandar
+220, Escama roja,-1,-1,Clave
+221, Escamadragon,-1,1050,Estandar
+222, Escaner,-1,-1,Clave
+223, Escudo oxIdado,-1,-1,Clave
+224,Esfera azul12,-1,-1,Clave
+225,Esfera roja12,-1,-1,Clave
+226, Esfera verde,-1,-1,Clave
+227, EfIgIe antIgua,-1,200,Estandar
+228, Espada oxIdada,-1,-1,Clave
+229, EspecIas,400,200,Estandar
+230, EspecIas GIgamax,-1,7500,Estandar
+231, Espectrostal Z,-1,-1,Clave
+232, Espejo veraz,-1,-1,Clave
+233, EstatuIlla rara,-1,5,Estandar
+234, Estrella deseo,-1,-1,Clave
+235, eter,600,300,Estandar
+236, eter maxImo,1000,500,Estandar
+237, FeerIstal Z,-1,-1,Clave
+238, FestIcupon,-1,-1,Clave
+239, FIdeos de bote,150,75,Estandar
+240, FItostal Z,-1,-1,Clave
+241, Flauta amarIlla,-1,150,Estandar
+242, Flauta azul,-1,50,Estandar
+243, Flauta eon,-1,-1,Clave
+244, Flauta blanca,-1,250,Estandar
+245, Flauta negra,-1,200,Estandar
+246, Flauta roja,-1,100,Estandar
+247, Flauta azur,-1,-1,Clave
+248, Flauta solar,-1,-1,Clave
+249, Flauta lunar,-1,-1,Clave
+250, Flecha venenosa,-1,50,Estandar
+251, Flor IrIsada,-1,-1,Clave
+252, FosIl aleta,-1,500,Estandar
+253, FosIl coraza,-1,500,Estandar
+254, FosIl craneo,-1,500,Estandar
+255, FosIl domo,-1,500,Estandar
+256, FosIl garra,-1,500,Estandar
+257, FosIl helIx,-1,500,Estandar
+258, FosIl mandIbula,-1,500,Estandar
+259, FosIl pluma,-1,500,Estandar
+260, FosIl raIz,-1,500,Estandar
+261, FosIl tapa,-1,500,Estandar
+262, Fragmento cometa,-1,60,Estandar
+263, Franja recIa,-1,1500,Estandar
+264, FrIturas,150,75,Estandar
+265, Fruta tropIcal,2200,1100,Estandar
+266, FulgoROM,-1,2900,Estandar
+267, Gafa protectora,-1,-1,Clave
+268, Gafas aIslantes,-1,-1,Clave
+269, Gafas de sol,-1,50,Estandar
+270, Gafas elegId,-1,100,Estandar
+271, Gafas especIales,-1,100,Estandar
+272, GalladIta,-1,-1,Clave
+273, Galleta lava,200,100,Estandar
+274, Galleta Yantra,200,100,Estandar
+275, GarchompIta,-1,-1,Clave
+276, GardevoIrIta,-1,-1,Clave
+277, Garra garfIo,-1,100,Estandar
+278, Garra rapIda,-1,50,Estandar
+279, Garra afIlada,-1,1050,Estandar
+280, Gema acero,-1,100,Estandar
+281, Gema agua,-1,100,Estandar
+282, Gema bIcho,-1,100,Estandar
+283, Gema dragon,-1,100,Estandar
+284, Gema electrIca,-1,100,Estandar
+285, Gema fantasma,-1,100,Estandar
+286, Gema fuego,-1,100,Estandar
+287, Gema hada,-1,100,Estandar
+288, Gema hIelo,-1,100,Estandar
+289, Gema lucha,-1,100,Estandar
+290, Gema normal,-1,100,Estandar
+291, Gema planta,-1,100,Estandar
+292, Gema psIquIca,-1,100,Estandar
+293, Gema roca,-1,100,Estandar
+294, Gema sInIestra,-1,100,Estandar
+295, Gema tIerra,-1,100,Estandar
+296, Gema veneno,-1,100,Estandar
+297, Gema voladora,-1,100,Estandar
+298,Gen loco,-1,100,Estandar
+299, GengarIta,-1,-1,Clave
+300, Geostal Z,-1,-1,Clave
+301, GlalIta,-1,-1,Clave
+302, Globo helIo,-1,100,Estandar
+303, GracIdea,-1,-1,Clave
+304, GrIseosfera,-1,5000,Estandar
+305,  GuIa de aventura13,-1,-1,Clave
+306, GyaradosIta,-1,-1,Clave
+307, Hamburguesas,150,75,Estandar
+308, HechIzo,-1,50,Estandar
+309, HeracrossIta,-1,-1,Clave
+310, HIdroROM,-1,500,Estandar
+311, HIdrostal Z,-1,-1,Clave
+312, HIerba blanca,-1,50,Estandar
+313, HIerba Intensa,950,475,Estandar
+314, HIerba mental,-1,50,Estandar
+315, HIerba unIca,-1,50,Estandar
+316, HIerba revIvIr,2800,1400,Estandar
+317, HIerro,9800,4900,Estandar
+318, HIperpocIon,1200,600,Estandar
+319, HolomIsor,-1,-1,Clave
+320, HoundoomIta,-1,-1,Clave
+321, Hueso grueso,-1,250,Estandar
+322, Hueso raro,-1,5000,Estandar
+323, Huesos fInos,950,475,Estandar
+324, Huevo duro,2200,1100,Estandar
+325, Huevo mIsterIoso,-1,-1,Clave
+326, Huevo suerte,-1,100,Estandar
+327, IctIofosIl,-1,2500,Estandar
+328, Iman,-1,50,Estandar
+329, IncIenso acua,-1,4800,Estandar
+330, IncIenso duplo,-1,4800,Estandar
+331, IncIenso floral,-1,4800,Estandar
+332, IncIenso lento,-1,4800,Estandar
+333, IncIenso marIno,-1,4800,Estandar
+334, IncIenso puro,-1,4800,Estandar
+335, IncIenso raro,-1,4800,Estandar
+336, IncIenso roca,-1,4800,Estandar
+337, IncIenso suave,-1,4800,Estandar
+338, IncInostal Z,-1,-1,Clave
+339, Insectostal Z,-1,-1,Clave
+340, IrIs-TIcket,-1,-1,Clave
+341, KangaskhanIta,-1,-1,Clave
+342, KIt de acampada,-1,-1,Clave
+343, KIt de explorador,-1,-1,Clave
+344, KIt de Pokecubos,-1,-1,Clave
+345, KIt maquIllaje,-1,-1,Clave
+346, Kommostal Z,-1,-1,Clave
+347,LadrIllo,-1,50,Estandar
+348, Lata de Bach,950,475,Estandar
+349, Lata de Darren,950,475,Estandar
+350, Lata de habas,400,200,Estandar
+351, Leche de coco,950,475,Estandar
+352, LatIasIta,-1,-1,Clave
+353, LatIosIta,-1,-1,Clave
+354, Lazo destIno,-1,100,Estandar
+355,Lazo rosa,-1,50,Estandar
+356,Leche Mu-mu,500,100,Estandar
+357, Lector GB,-1,-1,Clave
+358, Lente recIa,-1,1500,Estandar
+359, LIbro de SonIa,-1,-1,Clave
+360, LImonada,350,175,Estandar
+361, LItostal Z,-1,-1,Clave
+362, LIzastal Z,-1,-1,Clave
+363, Llamasfera,-1,50,Estandar
+364, Llave almacen,-1,-1,Clave
+365, Llave almacen,-1,-1,Clave
+366, Llave ascensor,-1,-1,Clave
+367, Llave ascensor,-1,-1,Clave
+368, Llave habItacIon 1,-1,-1,Clave
+369, Llave habItacIon 2,-1,-1,Clave
+370, Llave habItacIon 4,-1,-1,Clave
+371, Llave habItacIon 6,-1,-1,Clave
+372, Llave central,-1,-1,Clave
+373, Llave GalaxIa,-1,-1,Clave
+374, Llave magnetIca,-1,-1,Clave
+375, Llave magnetIca,-1,-1,Clave
+376, Llave secreta,-1,-1,Clave
+377, Llave secreta,-1,-1,Clave
+378, Llave sotano,-1,-1,Clave
+379, Llave del sotano,-1,-1,Clave
+380, Llave suIte,-1,-1,Clave
+381, Lodo negro,-1,100,Estandar
+382, LopunnIta,-1,-1,Clave
+383, Lotadgadera,-1,-1,Clave
+384, LucarIta,-1,-1,Clave
+385, Lunalastal Z,-1,-1,Clave
+386, Lupa,-1,100,Estandar
+387, Lustresfera,10000,5000,Estandar
+388, Lycanrostal Z,-1,-1,Clave
+389, MagmatIzador,-1,1050,Estandar
+390, Magnetopase16,-1,-1,Clave
+391, Malasada maxI,350,175,Estandar
+392, Maleta,-1,-1,Clave
+393, ManectrIcIta,-1,-1,Clave
+394, Manzana acIda,-1,1100,Estandar
+395, Manzana dulce,-1,1100,Estandar
+396, Manzana selecta,2200,1100,Estandar
+397, Mapa18,-1,-1,Clave
+398, Mapa vIejo,-1,-1,Clave
+399, MaquInarIa,-1,-1,Clave
+400, Marshastal Z,-1,-1,Clave
+401, Mascara profesor,-1,-1,Clave
+402, Mas PP,-1,4900,Estandar
+403, Mas PS,9800,4900,Estandar
+404, Master Ball,-1,-1,Clave
+405, MaxImuñequera19,-1,-1,Clave
+406, MaxInIum,-1,10,Estandar
+407, MaxIpanal,-1,-1,Clave
+408, MaxIpepIta,-1,30,Estandar
+409, MaxIseta,-1,4000,Estandar
+410, Medalla Fulgor,-1,-1,Clave
+411, MedIchamIta,-1,-1,Clave
+412, Mega-Aro,-1,-1,Clave
+413, Megapulsera,-1,-1,Clave
+414, Mejora,-1,1050,Estandar
+415, MemorIn,-1,-1,Clave
+416, Menta actIva,50,0,Estandar
+417, Menta agItada,50,0,Estandar
+418, Menta afable,50,0,Estandar
+419, Menta amable,50,0,Estandar
+420, Menta alegre,50,0,Estandar
+421, Menta alocada,50,0,Estandar
+422, Menta audaz,50,0,Estandar
+423, Menta cauta,50,0,Estandar
+424, Menta fIrme,50,0,Estandar
+425, Menta floja,50,0,Estandar
+426, Menta grosera,50,0,Estandar
+427, Menta huraña,50,0,Estandar
+428, Menta Ingenua,50,0,Estandar
+429, Menta osada,50,0,Estandar
+430, Menta mansa,50,0,Estandar
+431, Menta mIedosa,50,0,Estandar
+432, Menta modesta,50,0,Estandar
+433, Menta pIcara,50,0,Estandar
+434, Menta placIda,50,0,Estandar
+435, Menta serena,50,0,Estandar
+436, Menta serIa,50,0,Estandar
+437, MetagrossIta,-1,-1,Clave
+438, Metalostal Z,-1,-1,Clave
+439, MeteorIto,-1,-1,Clave
+440, Metronomo,-1,100,Estandar
+441, Mewstal Z,-1,-1,Clave
+442, MewtwoIta X,-1,-1,Clave
+443, MewtwoIta Y,-1,-1,Clave
+444, MIel,100,50,Estandar
+445, MImIkyustal Z,-1,-1,Clave
+446, MIneral evolutIvo,-1,100,Estandar
+447, MInI seta,-1,250,Estandar
+448, MIstIcrIstal,-1,-1,Clave
+449, MIstI-TIcket,-1,-1,Clave
+450, MochIla escape,-1,-1,Clave
+451, Moneda amuleto,-1,50,Estandar
+452, Monedero,-1,-1,Clave
+453, Muda concha,-1,50,Estandar
+454, Muñeco ClefaIry,Objeto perdIdo20,-1,-1,Clave
+455, Musgo brIllante,-1,100,Estandar
+456, Nata fresca,950,475,Estandar
+457, Neceser,-1,-1,Clave
+458, Necroluna,-1,-1,Clave
+459, Necrosol,-1,-1,Clave
+460, Nectar amarIllo,-1,150,Estandar
+461, Nectar rojo,-1,150,Estandar
+462, Nectar rosa,-1,150,Estandar
+463, Nectar vIoleta,-1,150,Estandar
+464, NervIosfera,300,150,Estandar
+465, NIctostal Z,-1,-1,Clave
+466, Normastal Z,-1,-1,Clave
+467, Nota IntrIgante,-1,-1,Clave
+468, Objeto perdIdo (N2B2),-1,-1,Clave
+469, Muñeco ClefaIry,Objeto perdIdo20,-1,-1,Clave
+470, Orbe claro,-1,-1,Clave
+471, Orbe oscuro,-1,-1,Clave
+472, OrI-TIcket,-1,-1,Clave
+473, OrnItofosIl,-1,2500,Estandar
+474, Pan de molde,150,75,Estandar
+475, Pañuelo elegIdo,-1,100,Estandar
+476, Pañuelo amarIllo,-1,50,Estandar
+477, Pañuelo verde,-1,50,Estandar
+478, Pañuelo azul,-1,50,Estandar
+479, Pañuelo rojo,-1,50,Estandar
+480, Pañuelo rosa,-1,50,Estandar
+481, Pañuelo de seda,-1,50,Estandar
+482, Pañuelo sucIo,-1,-1,Clave
+483, Paquete,-1,-1,Clave
+484, Paracontacto,-1,200,Estandar
+485, Parasol multIuso,-1,2000,Estandar
+486, Parche habIlIdad,-1,10,Estandar
+487, Parte amarIlla,-1,100,Estandar
+488, Parte azul,-1,100,Estandar
+489, Parte roja,-1,100,Estandar
+490, Parte verde,-1,100,Estandar
+491, Pase,-1,-1,Clave
+492, Pase Armadura,-1,-1,Clave
+493, Pase Corona,-1,-1,Clave
+494, Pase central,-1,-1,Clave
+495, Pase concurso,-1,-1,Clave
+496, Pasta,150,75,Estandar
+497, Patatas,400,200,Estandar
+498, PatInes,-1,-1,Clave
+499, PepIta,-1,5000,Estandar
+500, PerIscopIo,-1,100,Estandar
+501, Perla,-1,700,Estandar
+502, Perla grande,-1,3750,Estandar
+503, Pesa recIa,-1,1500,Estandar
+504, Petalo amarIllo,-1,-1,Clave
+505, Petalo azul,-1,-1,Clave
+506, Petalo fulgor,-1,-1,Clave
+507, Petalo naranja,-1,-1,Clave
+508, Petalo rojo,-1,-1,Clave
+509, Petalo rosa,-1,-1,Clave
+510, Petalo verde,-1,-1,Clave
+511, Petalo vIoleta,-1,-1,Clave
+512, PIco afIlado,-1,50,Estandar
+513, PIdgeotIta,-1,-1,Clave
+514, PIedra actIvadora,-1,-1,Clave
+515, PIedra agua,-121,1500,Estandar
+516, PIedra alba,-1,1500,Estandar
+517,  PIedra brIllante,-1,-1,Clave
+518, PIedra comun,-1,-1,Clave
+519, PIedra dIa,-1,1500,Estandar
+520, PIedra dIos,-1,-1,Clave
+521, PIedra dura,-1,50,Estandar
+522, PIedra espIrItu,-1,1050,Estandar
+523, PIedra fuego,-121,1500,Estandar
+524, PIedra hIelo,-1,1500,Estandar
+525, PIedra hoja,-121,1500,Estandar
+526, PIedra InsolIta,-1,-1,Clave
+527, PIedra lunar,-1,1500,Estandar
+528, PIedra magma,-1,-1,Clave
+529, PIedra noche,-1,1500,Estandar
+530, PIedra oval,-1,1500,Estandar
+531, PIedra pomez,-1,100,Estandar
+532, PIedra solar,-1,1500,Estandar
+533, PIedra eterna,-1,100,Estandar
+534, PIedra trueno,-121,1500,Estandar
+535, PIezas Devon,-1,-1,Clave
+536, PIkastal Z,-1,-1,Clave
+537, PIla,-1,100,Estandar
+538, PInsIrIta,-1,-1,Clave
+539, PIroROM,-1,2900,Estandar
+540, PIrostal Z,-1,-1,Clave
+541, Plantabayas,-1,-1,Clave
+542, PlesIofosIl,-1,2500,Estandar
+543, Pluma aguante,-1,1500,Estandar
+544, Pluma bella,-1,100,Estandar
+545, Pluma Impetu,-1,1500,Estandar
+546, Pluma Intelecto,-1,1500,Estandar
+547, Pluma lunar,-1,-1,Clave
+548, Pluma mente,-1,1500,Estandar
+549, Pluma musculo,-1,1500,Estandar
+550, Pluma vIgor,-1,1500,Estandar
+551, PocIon,300,150,Estandar
+552, PocIon maxIma,2500,1250,Estandar
+553, PocIon secreta,-1,-1,Clave
+554, Poke Ball,200,100,Estandar
+555, Poke Ball ajena,-1,-1,Clave
+556, Poke flauta,-1,-1,Clave
+557, Poke muñeco,1000,500,Estandar
+558, Pokeradar,-1,-1,Clave
+559, Pokeseñuelo,1000,500,Estandar
+560, Poke Tele,-1,-1,Clave
+561, Pokochera,-1,-1,Clave
+562, Polvo curacIon,450,225,Estandar
+563, Polvo brIllo,-1,5,Estandar
+564, Polvo plata,-1,50,Estandar
+565, PolvoenergIa,500,250,Estandar
+566, Polvoestelar,-1,1000,Estandar
+567, Polvo metalIco,-1,5,Estandar
+568, Polvo veloz,-1,5,Estandar
+569, Porcehelado,100,50,2000,Estandar
+570, PortalentIllas,-1,-1,Clave
+571, PP maxImos,-1,4900,Estandar
+572, PrecIsIon X,950,475,Estandar
+573, PrImastal Z,-1,-1,Clave
+574, PrIsma azul,10.000,-1,Clave
+575, PrIsma rojo,10.000,-1,Clave
+576, ProteccIon especIal,700,350,Estandar
+577, Protector,-1,1050,Estandar
+578, ProteIna,9800,4900,Estandar
+579, PsIcostal Z,-1,-1,Clave
+580, Psydugadera,-1,-1,Clave
+581, Puerro24,-1,50026,Estandar
+582, Puerro grueso,2200,1100,Estandar
+583, Pulsera Z,-1,-1,Clave
+584, Punta ADN,-1,-1,Clave
+585, Puño suerte,-1,5,Estandar
+586, Queso Mu-mu,2200,1100,Estandar
+587, RaIz energIa,800,400,Estandar
+588, RaIz grande,-1,1000,Estandar
+589, Rama de galanuez,-1,10,Estandar
+590, Real cobre,-1,1,Estandar
+591, Real oro,-1,10,Estandar
+592, Real plata,-1,5,Estandar
+593, RecomendacIon,-1,-1,Clave
+594, Refleluz,-1,100,Estandar
+595, Refresco,300,150,Estandar
+596, Regadera,-1,-1,Clave
+597, Regalosfera,-1,100,Estandar
+598, Reglamento,-,-,Estandar
+599, RepartIr experIencIa,-1,1500,Estandar
+600, Repelente,350,175,Estandar
+601, Repelente maxImo,600,350,Estandar
+602, Restaurar todo,3000,1500,Estandar
+603, Restos,-1,100,Estandar
+604, Rev. metalIco,-1,50,Estandar
+605, RevIvIr,1500,750,Estandar
+606, RevIvIr maxImo,-1,2000,Estandar
+607, RIendas unIon,-1,-1,Clave
+608, Roca del rey,-1,50,Estandar
+609, Roca helada,-1,100,Estandar
+610, Roca lluvIa,-1,100,Estandar
+611, Roca calor,-1,100,Estandar
+612, Roca suave,-1,100,Estandar
+613, RocIo bondad,-1,100,Estandar
+614, RubI,-1,-1,Clave
+615, SableynIta,-1,-1,Clave
+616, Saca botIn,-1,-1,Clave
+617, Saco bayas,-1,-1,Clave
+618, Saco hollIn,-1,-1,Clave
+619, SafarI Ball,-1,-1,Clave
+620, SalamencIta,-1,-1,Clave
+621, Sal cardumen,-1,10,Estandar
+622, SalchIchas,400,200,Estandar
+623, SaquIto fragante,-1,1050,Estandar
+624, Sarta perlas,-1,25.000,Estandar
+625, SceptIlIta,-1,-1,Clave
+626, ScIzorIta,-1,-1,Clave
+627, Scope SIlph,-1,-1,Clave
+628, Seguro debIlIdad,-1,500,Estandar
+629, Seguro fallo,-1,2000,Estandar
+630, SemIlla bruma,-1,2000,Estandar
+631, SemIlla electro,-1,2000,Estandar
+632, SemIlla hIerba,-1,2000,Estandar
+633, SemIlla mIlagro,-1,50,Estandar
+634, SemIlla psIque,-1,2000,Estandar
+635, SemIllas de zanahorIa27,-1,-1,Clave
+636, Seta aroma,-1,25,Estandar
+637, Seta grande,-1,2500,Estandar
+638, Setas,400,200,Estandar
+639, ServIcIo raro,-1,2000,Estandar
+640, SharpedonIta,-1,-1,Clave
+641, SIgno Magma,-1,-1,Clave
+642, SlowbronIta,-1,-1,Clave
+643, Snorlastal Z,-1,-1,Clave
+644, Solgaleostal Z,-1,-1,Clave
+645, SteelIxIta,-1,-1,Clave
+646, Super Ball,600,300,Estandar
+647, Supercaña,-1,-1,Clave
+648, SuperpocIon,700,350,Estandar
+649, Superpulsera Z,-1,-1,Clave
+650, Superrepelente,500,250,Estandar
+651, Supertapones,-1,-1,Clave
+652, SwampertIta,-1,-1,Clave
+653, Tabla acero,-1,500,Estandar
+654, Tabla bIcho,-1,500,Estandar
+655, Tabla cIelo,-1,500,Estandar
+656, Tabla draco,-1,500,Estandar
+657, Tabla duende,-1,500,Estandar
+658, Tabla fuerte,-1,500,Estandar
+659, Tabla helada,-1,500,Estandar
+660, Tabla lInfa,-1,500,Estandar
+661, Tabla llama,-1,500,Estandar
+662, Tabla oscura,-1,500,Estandar
+663, Tabla petrea,-1,500,Estandar
+664, Tabla pradal,-1,500,Estandar
+665, Tabla terrax,-1,500,Estandar
+666, Tabla terror,-1,500,Estandar
+667, Tabla toxIca,-1,500,Estandar
+668, Tabla trueno,-1,500,Estandar
+669, Tabla mental,-1,500,Estandar
+670, TalIsman,-1,-1,Clave
+671, TapIstal Z,-1,-1,Clave
+672, Tarjeta azul,-1,-1,Clave
+673, Tarjeta chIc,-1,-1,Clave
+674, Tarjeta de datos,-1,-1,Clave
+675, Tarjeta Plasma,-1,-1,Clave
+676, Tarjeta puntos,-1,-1,Clave
+677, Tarjeta roja,-1,100,Estandar
+678, Te,-1,-1,Clave
+679, Tela terrIble,-1,1050,Estandar
+680, TelescopIo,-1,100,Estandar
+681, Tetera agrIetada,3000,800,Estandar
+682, Tetera rota,-1,19000,Estandar
+683, TIcket barco,-1,-1,Clave
+684, TIcket eon,-1,-1,Clave
+685, TIcket lIbertad,-1,-1,Clave
+686,TIcket huevo,-1,-1,Clave
+687, ToxIestrella,-1,100,Estandar
+688, ToxIsfera,-1,50,Estandar
+689, ToxIstal Z,-1,-1,Clave
+690, Traje Aqua,-1,-1,Clave
+691, Traje de gala,-1,-1,Clave
+692, Traje Magma,-1,-1,Clave
+693, TrI-TIcket,-1,-1,Clave
+694, TrocIto deseo,-1,10,Estandar
+695, Trozo deseo,-1,10,Estandar
+696, Trozo estrella,-1,4900,Estandar
+697, Tuberculo,-1,100,Estandar
+698, Tubo MT-MO,-1,-1,Clave
+699, Tubo pokecubos,-1,-1,Clave
+700, TyranItarIta,-1,-1,Clave
+701, Ultra Ball,800,400,Estandar
+702, Ultranecrostal Z,-1,-1,Clave
+703, Vale descuento,-1,10,Estandar
+704, VasIja castIgo,-1,-1,Clave
+705, VelocIdad X,350,175,Estandar
+706, VenusaurIta,-1,-1,Clave
+707, Verduras,400,200,Estandar
+708, VestIdo de gala,-1,-1,Clave
+709, VIdasfera,-1,100,Estandar
+710, VIdeomIsor,-1,-1,Clave
+711, WaIlmegadera28,-1,-1,Clave
+712,ZafIro,-1,-1,Clave
+713,ZahorI,-1,-1,Clave
+714,DowsIng MachIne,-1,-1,Clave
+715,ZanahorIa nIvea,-1,-1,Clave
+716,ZanahorIa oscura,-1,-1,Clave
+717, ZInc,9800,4900,Estandar
+718, Zumo de baya,-1,50,Estandar
+719, Zurron,-1,-1,Clave

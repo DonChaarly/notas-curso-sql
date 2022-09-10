@@ -1,0 +1,21 @@
+
+
+
+		VARIABLES TEMPORALES
+
+Una variable es un lugar en la memoria ram en la que se almacenara informacion que se necesita para utilizarla despues
+Cuando se cierre la sesion de mysql esta informacion se borrara
+
+El tipo de dato de la variable se genera dinamicamente, osea cuando se guarda el valor
+Si la varible a crear ya existe, se sobreescribe el valor de esta varible
+
+
+		SINTAXYS
+Crear una variable temporal:
+	SET @(nombre Varaible) = '(valor)';																	[SET @(Variable)]
+Crear una variable temporal a partir de una consulta
+	SELECT @(nombreVariable) := (consulta);																[@(Variable) :=]
+Utilizar una variable temporal
+	SELECT (columas) FROM (nombre Tablas) WHERE (columna) < @(nombreVariable);							[WHERE, @(variable)]
+Consultar el valor de una variable
+	SELECT @(nombre Variable);																			[SELECT @(Variable)]

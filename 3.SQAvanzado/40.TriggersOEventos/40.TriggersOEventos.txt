@@ -1,0 +1,49 @@
+
+
+
+			TRIGGERS
+	Los triggers son realmente eventos los cuales se disparan cuando ocurre una accion
+	Tipos de Triggers
+		INSERT 
+		UPDATE 
+		DELETE
+	Los triggers funcinonan a nivel de tabla y no de base de datos, por lo cual
+		estos triggers se disparan cuando se realice un evento en la tabla en donde fueron creados, ya sea un insert, update, delete
+		aunque se vaya a insertar informacion en otra tabla, en donde ocurrira el evento es la tabla que se indicara en el trigger
+	Se puede crear un trigger para antes o despues del evento
+
+	Para crear un disparador siempre es conveniente cambiar el delimitador como con las funciones
+	Nota: Cuando se quiere hacer un SET y utilizar la funcion last_insert_id() para guardar el ultimo id generado
+			esto presenta ciertos fallos
+			Por ello es mejor utilizar
+				SELECT NEW(columnaAutoincremental, ej. algun id) INTO (variableInterna)
+
+
+		SINTAXYS
+	Crear un Trigger o Disparador:
+		CREATE TRIGGER (nombre trigger) (AFTER o BEFORE) (INSERT, UPDATE, DELETE) ON (nombre Tabla) FOR EACH ROW			[CREATE TRIGGER]
+	Empezar procemiento que se ejecutara al cumplirse el disparador
+		BEGIN																												[BEGIN]
+	Terminar procemiento que se ejecutara al cumplirse el disparador
+		END																													[END]
+
+
+	Ejemplo de trigger en MySQL
+
+		DELIMITER //
+			CREATE TRIGGER control_examenes AFTER INSERT ON Examenes FOR EACH ROW
+			BEGIN
+				DECLARE examenId INT;
+	    		SELECT NEW.id_examen INTO examenId;
+	    		INSERT INTO Examanesfaltantes (Examen, Fecha) VALUES (examenId, now());
+			END //
+		DELIMITER ;
+
+	Ejemplo de trigger en SQLite
+
+		CREATE TRIGGER control_examenes AFTER INSERT ON Examenes FOR EACH ROW
+		BEGIN
+    		INSERT INTO Examanesfaltantes (Examen, Fecha) VALUES (LAST_INSERT_ROWID(), DATE('now'));
+		END;
+
+

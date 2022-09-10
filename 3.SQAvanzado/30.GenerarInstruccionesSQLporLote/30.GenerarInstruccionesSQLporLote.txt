@@ -1,0 +1,30 @@
+
+			
+			CREAR INSTRUCCIONES POR LOTE
+
+Para crear instrucciones por lote simplemente se escriben las instrucciones que se quieren ejeuctar en
+un script el cual se puede crer en cualquier aplicacion de texto plano como el block de notas o notepadd++ o el mismo mysql workbench
+La extencion del script puede ser sql, pero realmente no importa, puede ser txt
+
+	Cuestiones a tener en cuenta
+La base de datos en la cual se insertara las instrucciones debe ya estar creada, no se puede colocar la sentencia create DATABASE 
+en las instucciones
+
+			EJECUTAR INSTRUCCIONES POR LOTE desde la consola en mysql
+ejecutar instrucciones por lotes desde un archivo externo
+	mysql -u admin (nombre base de datos) < "(ruta del archivo)" -p											[(nombre bae de datos) , "(ruta)"] 
+
+			EJECUTAR INSTRUCCIONES POR LOTE desde la consola en sqlite
+ejecutar instrucciones por lotes desde un archivo externo
+	.read "(ruta del archivo)"																				[.read "(ruta archivo)"]
+
+
+
+			EJECUTAR INSTRUCCIONES POR LOTE desde MySQL workbench
+Para esto simplemente se abre el script desde el boton abrir script 
+y con esto se puede ejecutar desde la interfaz
+
+
+			EJECUTAR INSTRUCCIONES POR LOTE desde SQLite Studi
+Para esto simplemente se abre el script desde el boton abrir script 
+y con esto se puede ejecutar desde la interfaz

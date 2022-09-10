@@ -1,0 +1,24 @@
+ALTER TABLE Materias ADD Eliminado TINYINT;
+
+ALTER TABLE Asignaturas ADD Eliminado TINYINT;
+
+ALTER TABLE Estudiantes ADD Eliminado TINYINT;
+
+CREATE TABLE IF NOT EXISTS Docentes (
+id_docente INT(11) NOT NULL AUTO_INCREMENT, Nombre varchar(45), Apellido varchar(45),
+Documento varchar(45) NOT NULL UNIQUE, FNac DATE, Edad INT(11), Grado INT(11),
+FIngreso INT(11), Eliminado TINYINT(4),PRIMARY KEY (id_docente));
+
+CREATE TABLE IF NOT EXISTS Examenes (
+id_examen INT(11) NOT NULL AUTO_INCREMENT, Curso INT, Fecha DATE, Eliminado TINYINT(4), 
+PRIMARY KEY (id_examen), FOREIGN KEY (Curso) REFERENCES Curso(idCurso));
+
+CREATE TABLE IF NOT EXISTS RendicionesExamen (
+id_rendicionesExamen INT(11) NOT NULL AUTO_INCREMENT, Examen INT, Inscripcion INT,
+Nota SMALLINT(6), Eliminado TINYINT(4), PRIMARY KEY (id_rendicionesExamen), 
+FOREIGN KEY (Examen) REFERENCES Examenes(id_examen),
+FOREIGN KEY (Inscripcion) REFERENCES InscripcionesCursos(idInscripcionesCurso));
+
+ALTER TABLE Curso ADD Docente INT(11), ADD CONSTRAINT fk_docente FOREIGN KEY (Docente) REFERENCES Docentes(id_docente);
+
+ALTER TABLE Curso ADD (Puntaje INT, Asignatura INT, Edicion INt, Anno INT, Estado varchar(45));

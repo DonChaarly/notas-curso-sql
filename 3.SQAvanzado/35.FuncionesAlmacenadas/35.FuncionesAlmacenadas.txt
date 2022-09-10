@@ -1,0 +1,45 @@
+
+
+
+		FUNCIONES ALMACENADAS
+
+Las funciones almacenadas son como los procedimientos almacenados, solo que las funciones siempre van a retornar un valor
+los procedimientos en si no retornan nada
+Solo se tendran entradas en los parametros, por ello no es necesario colocar IN o OUT
+Se tiene que especificar el tipo de valor a retornar y
+si la funcion es deterministica o no
+
+Debido a que la funcion retorna un valor, se utiliza mas que nada en consultas
+
+
+	SINTAXYS
+Crear una funcion almacenada:
+	CREATE FUNCTION (baseDeDatos).(nombreFuncion) ((entrada1) (tipoValor),..) RETURNS (tipoValor) DETERMINISTIC/NOT DET..;			[CREATE FUNCTION, RETURNS]
+Iniciar funcion almacenada:
+	BEGIN 																															[BEGIN]
+Declarar una variable interna:
+	DECLARE (nombreVariable) (tipoDato);																							[DECLARE]
+Especificar valor a retornar:
+	RETURN (valor);																													[RETURN]
+Terminar funcion Almacenada:
+	entrada1																														[END]
+Llamar una funcion almacenada:
+	(nombre Variable)((parametros))																									
+
+
+
+		EJEMPLO DE CREACION DE FUNCION
+
+	DELIMITER //
+	CREATE FUNCTION pokemondb.cantidad_especies (nombre VARCHAR(15)) RETURNS INT DETERMINISTIC
+	BEGIN
+		DECLARE miCantidad INT;
+		SELECT COUNT(*) INTO miCantidad FROM Especies WHERE Especies.Nombre >= nombre;
+		RETURN (miCantidad);
+	END //
+	DELIMITER ;
+
+
+		EJEMPLO DE LLAMAR A UNA FUNCION
+
+	SELECT Especies.Nombre FROM Especies WHERE Especies.idEspecies = cantidad_especies('Raichu');

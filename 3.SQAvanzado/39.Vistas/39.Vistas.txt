@@ -1,0 +1,13 @@
+
+			VISTAS
+
+	Las vistas son como los procedimientos almacenados, se crean una vez y se tienen disponibles siempre
+	Nos premiten tener de manera mas facil una vista de una tabla creada por un select
+	Al final del nombre de la vista se suele colocar _vw o _view para indicar que se trata de una vista
+	Las vistas son ultiles ya que se les puede bloquear el ingreso a la tablas pero se les puede otorgar ingreso a las vistas
+	Las vistas se mostraran como si fueran una tabla y se puede utilizar como una tabla mas
+	en la cual se pueden hacer consultas pero no inserciones ni actualizaciones
+
+
+	SINTAXYS
+		CREATE VIEW (nombre Vista) AS (consulta)														[CREATE VIEW, AS]

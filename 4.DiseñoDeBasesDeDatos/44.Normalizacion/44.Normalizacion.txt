@@ -1,0 +1,55 @@
+
+
+			NORMALIZACION
+	La normalizacion se basa en seguir una serie de normas para crear las tablas de una base de datos de forma tal que al seguirlas
+	se asegure tener una estructura de la mejor forma para evitar la duplicacion de informacion, la anomalia de la informacion, etc.
+
+
+		RELACIONES ENTRE TABLAS
+
+	UNO A UNO: Es cuando se tiene vinculado un registro de una tabla con solo otro registro de otra tabla
+			   Esta relacion se simboliza con un 1 de parte de ambas tablas
+
+	UNO A MUCHOS: Es cuando se tiene vinculado un registro de una tabla a varios registros de otra tabla
+				  Esta relacion se simboliza con un 1 de parte de la tabla que tiene el registro a vincular y un * de parte de la tabla que vincula este registro a varios de sus registros
+
+	MUCHOS A MUCHOS: Es cuando se tiene vinculado varios registros de una tabla a varios registros de otra tabla
+					 Esta relacion es muy problematica y se debe evitar y cambiar por relaciones uno a muchos
+
+
+
+			FORMAS DE LA NORMALIZACION
+
+		PRIMERA FORMA NORMAL
+
+	1. No hay un orden de arriba-abajo en las filas:
+			Los registros no tiene porque ir insertandose de forma ordenada, el indice si obviamente
+			pero los datos no tiene porque tener un orden especifico, la estrucutra no depende de este orden
+	2. No hay orden de izquierda a derecha en las columas
+			La estrucutra de la BD no depende del orden que tengan las columnas de sus tablas
+			Si se cambia el orden de estas columnas no debe presentar ninguna problema 
+	3. No hay filas duplicadas:
+			Esto quiere decir que debe haber al menos un campo de la tabla que impida que 
+			la informacion se duplique
+			Por ejemplo, en una tabla de clientes el numero de cuenta del cliente implide que el 
+			registro pueda repetirse, independientemente si dos o mas clientes se llaman igual
+			Se tiene un numero de cuenta para cada cliente
+	4. Cada insercion de fila-columna contiene exactamente un valor de dominio aplicable (y nada mas)
+			Esto quiere decir que no se puede cambiar el tipo de dato que se le aplica a cada 
+			campo, si un campo admite un dato de tipo INT solo debe colocarse estos tipos de datos
+			Se puede admitir un null tambien
+	5. Todas las columnas son regulares:
+			Cada fila no debe depender de otras filas, salvo que sean claves foraneas
+
+		
+		SEGUNDA FORMA NORMAL
+
+	1. Se debe cumplir con la primea forma normal
+	2. No se debe incluir dependencias parciales:
+			Se debe evitar tener claves primarias con mas de una columna 
+
+		TERCERA FORMA NORMAL
+	1. Se debe cumplr con la segunda forma normla
+	2. No se debe contener dependencias transitivas ( no hacer caso, esto nunca pasa si ya e cumplen las dos formas anteriores)
+			Cuando un atributo  que no sea clave depende de una clave primaria
+			 a traves de otro atributo  que no sea clave

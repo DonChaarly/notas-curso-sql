@@ -1,0 +1,28 @@
+ALTER TABLE Materias ADD Eliminado INTEGER;
+
+ALTER TABLE Asignaturas ADD Eliminado INTEGER;
+
+ALTER TABLE Estudiantes ADD Eliminado INTEGER;
+
+CREATE TABLE IF NOT EXISTS Docentes (
+id_docente INTEGER PRIMARY KEY AUTOINCREMENT, Nombre TEXT, Apellido TEXT,
+Documento TEXT NOT NULL UNIQUE, FNac TEXT, Edad INTEGER, Grado INTEGER,
+FIngreso INTEGER, Eliminado INTEGER);
+
+CREATE TABLE IF NOT EXISTS Examenes (
+id_examen INTEGER PRIMARY KEY AUTOINCREMENT, Curso INTEGER, Fecha TEXT, Eliminado INTEGER, 
+FOREIGN KEY (Curso) REFERENCES Cursos(idCurso));
+
+CREATE TABLE IF NOT EXISTS RendicionesExamen (
+id_rendicionesExamen INTEGER PRIMARY KEY AUTOINCREMENT, Examen INTEGER, Inscripcion INTEGER,
+Nota INTEGER, Eliminado INTEGER, 
+FOREIGN KEY (Examen) REFERENCES Examenes(id_examen),
+FOREIGN KEY (Inscripcion) REFERENCES InscripcionesCursos(idInscripcionesCurso));
+
+ALTER TABLE Cursos ADD COLUMN Docente INTEGER REFERENCES Docentes(id_docente);
+
+ALTER TABLE Cursos ADD Puntaje INTEGER
+ALTER TABLE Cursos ADD Asignatura INTEGER;
+ALTER TABLE Cursos ADD Edicion INTEGER;
+ALTER TABLE Cursos ADD Anno INTEGER;
+ALTER TABLE Cursos ADD Estado TEXT;

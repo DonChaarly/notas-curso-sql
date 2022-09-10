@@ -1,0 +1,51 @@
+
+	CLAVE PRIMARIA
+La clave primaria es un valor unico normalemente numerico 
+el cual corresponde a una columna de la tabla y funciona como identificador
+de cada registro
+
+
+
+
+	CLAVE FORANEA
+La clave foranea es un campo que apunta a la clave primaria de otra tabla
+En vez de repetir todos datos de otra tabla se coloca simplemente la clave primaria de dicho registro
+para hacer referencia a los datos de un registro de otra tabla
+
+
+------------------------------------ EN MYSQL -----------------------------------------------------------------
+
+		CLAVE PRIMARIA 
+Para establecer una clave primaria, se coloca hasta el ultimo el comando PRIMARY KEY y el 
+nombre de la columna que sera la llave primaria
+
+Establecer un campo como clave primaria
+	CREATE TABLE (nombre tabla) ((atributo) (tipo de dato), (atributo2) (tipo de dato), ..., PRIMARY KEY ((columna)));	[PRIMARY KEY]
+
+
+------------------------------------ EN SQLite -----------------------------------------------------------------
+
+		CLAVE PRIMARIA 
+Para establecer una clave primaria, se coloca en la definicion de la columna el comando PRIMARY KEY, no es necesario colocar NOT NULL
+ya que esto es reduntante
+
+Establecer un campo como clave primaria
+	CREATE TABLE (nombre tabla) ((atributo) (tipo de dato) PRIMARY KEY AUTO_INCREMENTAL, (atributo2) (tipo de dato), ...,);	[PRIMARY KEY]
+
+
+------------------------------------ EN MYSQL y SQLite -----------------------------------------------------------------
+
+
+		CLAVE FORANEA 
+
+Para establecer una clave foranea, se coloca hasta el ultimo el comando FOREIGN KEY, el nombre
+de la columna que sera la clave foranea, seguido del comando REFERENCES, el nombre de la tabla a la que se hara referencia
+y el nombre de la columna a la que se hace referencia
+El tipo de dato de la clave foranea debe ser el mismo al del campo al que esta apuntando
+
+Establecer un campo como clave foranea
+	CREATE TABLE (nombre tabla) ((columna) (tipo de dato), FOREIGN KEY ((columna)) REFERENCES (tabla)(columna) );		[FOREIGN KEY, REFERENCES]
+
+
+
+

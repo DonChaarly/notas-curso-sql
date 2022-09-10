@@ -1,0 +1,22 @@
+
+--------------------------- SELECCION EN MAS DE UNA TABLA ----------------------------------------
+
+	Para hacer una consulta en mas de una tabla el mismo tiempo de usa la notacions
+	nombreTabla.nombreColumna
+	Se especifica la tabla de donde se hara la consulta de la columna, y despues del FROM se tienen que especificar 
+	las tablas de donde se esta consultando la informacion
+
+Seleccionar varios campos de varias tablas:
+	SELECT (tabla1).(columna), (tabla2).(columna),... FROM (tabla1), (tabla2),...;											[(tabla).(columna)]
+
+
+	Despues de FROM no solo se colocan las tablas que se establecieron antes, sino tambien las que se utilizan en las 
+	condiciones depues de WHERE
+	ej.
+		INSERT INTO InscripcionesCursos (EstudianteInscrito, CursoInscrito) VALUES (LAST_INSERT_ID(), 1);
+
+
+		COLOCAR ALIAS A ALGUNA COLUMNA
+Colocar alias a columna seleccionada:
+	SELECT (nombreColumna1) AS (nombreAlias), (nombreColumna2) AS (nombreAlias),... FROM (nombreTabla);					[AS]
+

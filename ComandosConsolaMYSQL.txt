@@ -1,0 +1,397 @@
+Lo que esta entre () se sustituye por los datos que tocan
+Documentacion de MySQL: 
+	https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
+
+----------------------------------- CONEXIN A MYSQL DESDE CONSOLA ---------------------------------------
+Conexion a MySQL: 
+	mysql -u (usuario) -p																								[mysql -u (usuario) -p]
+Desconexion a MySQL: 
+	exist																												[exit]
+ejecutar instrucciones por lotes desde un archivo externo:	
+	mysql -u (usuario) (nombre base de datos) < "(ruta del archivo)" -p													[(database) < "(rutaArchivo)"]
+Forzar al servidor a seguir adelante aun si hay errores
+	mysql -f -u (usuario) (nombre base de datos) < '(ruta del archivo)' - separador										[-f]		
+
+------------------------------------NUEVO USUARIO-----------------------------------------------------------
+
+Crear un nuevo usuario: 
+	CREATE USER '(usuario)'@'(lugarDesdeDondeSeConectaElCliente o aplicacin)' IDENTIFIED BY '(contrasena)';
+Otorgar privilegios: 
+	GRANT ALL PRIVILEGES ON '(bases de datos del usuario, *.* para otorgar a todas las bases de datos)' TO '(usuario)'@'lugarDelCliente)';
+mostra todas las bases de datos: 
+	SHOW DATABASES;
+
+
+-------------------------------------SERVIDOR-----------------------------------------------------------------
+
+indicar servidor o host: -h (servidor o host)
+					ej. mysql -u (usurio) -h (servidor o host) -p
+
+------------------------------------BASE DE DATOS-----------------------------------------------------------
+
+crear base de datos: 
+	CREATE DATABASE (nombrede la base de datos);																		[CREATE DATABASE]
+usar base de datos: 
+	USE (nombre de la base de datos);																					[USE]
+
+------------------------------------TABLAS-----------------------------------------------------------------------
+
+crear nueva tabla: 
+	CREATE TABLE (nombre tabla) ((columna1) (tipo de dato), (columna2) (tipo de dato), ...);							[CREATE TABLE]
+Crear tabla siempre y cuando la tabla no exista:
+	CREATE TABLE IF NOT EXIST (nombre tabla) ....;																		[IF NOT EXIST]
+Ver atributos de la tabla: 
+	DESCRIBE TABLE (nombre tabla);																						[DESCRIBE TABLE]
+Mostrar todas las tablas
+	SHOW TALBES;																										[SHOW TABLES]
+Crear tabla con motor MyISAM Estatica:
+	CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=COMPACT;													[ENGINE=MyISAM, ROW_FORMAT=COMPACT]
+Crear tabla con motor MyISAM Dinamica:
+	CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=DYNAMIC;													[ENGINE=MyISAM, ROW_FORMAT=DYNAMIC]
+Crear tabla con motor MyISAM Comprimida:
+	CREATE TABLE (nombre Tabla) (...) ENGINE=MyISAM ROW_FORMAT=COMPRESSED;												[ENGINE=MyISAM, ROW_FORMAT=COMPRESSED]
+Crear tabla con motor Merge
+	CREATE TABLE (nombreTabla) (...) ENGINE Merge UNION = (Tabla1, Tabla2,...);										[ENGINE=Merge, UNION=(Tabla1, Tabla2,..)]
+Mostrar el motor de las tablas
+	SHOW ENGINES;																										[SHOW ENGINES]
+Mostra el motor de una tabla y demas informacion:
+	SHOW TABLE STATUS LIKE '(nombre Tabla)';																			[SHOW TABLE STATUS LIKE]
+
+------------MODIFICAR TABLA--------------------------
+
+Agregar una nueva columna
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato);												[ALTER TABLE, ADD]
+Agregar columna en lugar especifico
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato) AFTER (columna);								[ALTER TABLE, AFTER]
+Cambiar nombre de tabla:
+	ALTER TABLE (nombre TAbla) RENAME TO  (nuevo nombre);																[RENAME TO]
+Eliminar alguna columna
+	ALTER TABLE (nombre Tabla) DROP COLUMN (columna1), (columna 2), ...;												[DROP COLUMN]
+Renombrar columna:
+	ALTER TABLE (nombre Tabla) RENAME COLUMN (columna) TO (nuevo nombre Columna);										[RENAME COLUMN, TO]
+Modificar tipo de dato de columna:
+	ALTER TABLE (nombre Tabla) MODIFY COLUMN (columna) (nuevo tipo de dato);											[MODIFY COLUMN]
+Modificar el motor de una tabla:
+	ALTER TABLE (nombre Tabla) ENGINE = (motor);																		[ALTER TABLE, ENGINE]
+
+
+---------------------------------- ATRIBUTOS DE COLUMNAS ----------------------------------------
+al crear o modificar un campo se le puede colocar atributos:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) (atributo1) (atributo 2), (nombreColumna1) (tipo de dato), ...);	[(atributo)]
+Campo no nulo:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) NOT NULL);												[NOT NULL]
+Campo no auto incremental:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) NOT NULL AUTO_INCREMENT);								[AUTO_INCREMENT]
+Campo con valor unico:
+	CREATE TABLE (nombre tabla) ((nombreColumna1) (tipo de dato) AUTO_INCREMENTAL UNIQUE);								[UNIQUE]
+Campo con solo valores positivos
+	CREATE TABLE (nombre Tabla) ((nombreColumna1) (tipo de dato) UNSIGNED);												[UNSIGNED]
+Rellenar de ceros a la izquierda los valores:
+	CREATE TABLE (nombre Tabla) ((nombreColumna1) (tipo de dato) ZEROFILL);												[ZEROFILL]
+Establecer un valor por defecto a una columna:
+	CREATE TABLE (nombre TAbla) ((nombreColumna1) (tipo de dato) DEFAULT((valor)))										[DEFAULT]
+
+
+-------------------------------- CLAVE PRIMARIA E INDICES--------------------------------------------------
+
+Establecer un campo como clave primaria
+	CREATE TABLE (nombre tabla) ((atributo) (tipo de dato), (atributo2) (tipo de dato), ..., PRIMARY KEY ((columna)));	[PRIMARY KEY]
+Clave primaria de mas de una columna:
+	CREATE TABLE (nombre Tabla) (columnas), PRIMARY KEY (columna1, columna 2, ...);										[PRIMARY KEY (columna1, columna2,...)]
+Crear un indice:
+	CREATE TABLE (nombre Tabla) (Columnas), INDEX (nombre Index) ((columnas));											[INDEX]
+Crear un indice fulltext:
+	CREATE TABLE (nombre Tabla) (Columnas), FULLTEXT ((columna));														[FULLTEXT]
+Buscar dentro de un campo fulltext:
+	SELECT (columnas) FROM (nombre Tabla) WHERE Match (columnaFullText) AGAINST ('palabra o valor');					[Match(), AGAINST()]
+
+
+
+------------------------------- CLAVE FORANEA ----------------------------------------------------
+
+Establecer un campo como clave foranea
+	CREATE TABLE (nombre tabla) ((columna) (tipo de dato), FOREIGN KEY ((columna)) REFERENCES (tabla)((columna)) );		[FOREIGN KEY, REFERENCES]
+Agregar clave foranea a tabla ya existente:
+	ALTER TABLE (nombre Tabla) ADD (columna) (definicion), ADD CONSTRAINT fk_(nombrecoluma) FOREIGN KEY (columna) REFERENCES (tabla)(columna);
+																														[ALTER TABLE, FOREIGN KEY]
+
+
+------------------------------------SELECCION EN UNA TALBA-----------------------------------------------------------
+
+seleccionar todos los datos de la tabla: 
+	SELECT * FROM (nombre tabla);																						[*]
+seleccin por columnas: 
+	SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla);													[nombreColumna]
+Colocar alias a columna seleccionada:
+	SELECT (nombreColumna1) AS (nombreAlias), (nombreColumna2) AS (nombreAlias),... FROM (nombreTabla);					[AS]
+Seleccionar de manera ordenada: 
+	SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1), (condicion2),...;			[ORDER BY]
+Ordenar de forma descendente: 
+	SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1) DESC, (condicion2),... ;		[DESC]
+Ordenar de forma Ascendente: 
+	SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1) DESC, (condicion2) ASC,... ;	[ASC]
+Seleccionar sin repetidos: 
+	SELECT DISTINCT  (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) ORDER BY (condicino1), (condicion2),...;	[DISTINCT]
+Seleccionar registros con valor null:
+	SELECT (nombreColumna1), (nombreColumna2),.. FROM (nombreTabla) WHERE (columna) IS NULL;							[IS NULL]
+Colocar un alias a una tabla para tratarla como otra tabla
+	SELECT (AliasTabla.columna) FROM (nombre Tabla) (Alias Tabla);														[(tabla) (Alias)]
+Colocar un alias a una tabla para tratarla como otra tabla
+	SELECT (AliasTabla.columna) FROM (nombre Tabla) AS (Alias Tabla);													[(tabla) AS (Alias)]
+Colcoar un alias a una tabla utilizando INNER JOIN
+	SELECT (columna) (AliasTabla.columna) FROM (nombre Tabla) INNER JOIN (nombre Tabla) AS (alis) ON (condicion);		[INNER JOIN (tabla) AS (alias)]
+
+
+
+----------------------------------CONDICINOES -------------------------------------------------------------------------
+Seleccionar por condicion: 
+	SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)';														[WHERE]
+Seleccionar cumpliendo dos o mas condiciones operado and: 
+	SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)' AND (nombreColumna) = '(valor)';						[AND]
+Seleccionar cumpliendo alguna condicion operador or: 
+	SELECT * FROM (nombreTabla) WHERE (nombreColumna) = '(valor)' OR (nombreColumna) = '(valor)';						[OR]
+Utilizar parentesis para agrupar condiciones:
+	SELECT * FROM (nombreTabla) WHERE ((nombreColumna) = '(valor)' AND (nombreColumna)= '(valor)') OR (nombreColumna) = '(valor)';	[()]
+Seleccinar cumpliendo un rango de valores con operadores <,>, <=, >=:
+	SELECT * FROM (nombreTabla) WHERE (nombreColumna) >= '(valor)';														[<,>, <=, >=]
+Seleccinar en base a un valor que pueda ser parecido
+	SELECT * FROM (nombreTabla) WHERE (nombreColumna) LIKE '(valor)%';													[LIKE, %]
+Establecer un limite de registros a recuperar:
+	SELECT * FROM (nombreTabla) LIMIT (valor);																			[LIMIT]
+Condicion con expresion regular
+	SELECT (columnas) FROM (nombre Tablas) WHERE (columna) REGEXP '(expresion regular';									[REGEXP '(exp regular)']
+seleccion utilizando innerJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) INNER JOIN (Tabla con la que se unira) ON (condicion);			[INNER JOIN, ON]
+seleccion utilizando LeftJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) LEFT JOIN (Tabla con la que se unira) ON (condicion);			[LEFT JOIN, ON]
+seleccion utilizando RightJoin
+	SELECT (columnas) FROM (Tabla desde la que partimos) RIGHT JOIN (Tabla con la que se unira) ON (condicion);			[RIGHT JOIN, ON]
+
+
+--------------------------- SELECCION EN MAS DE UNA TABLA ----------------------------------------
+
+Seleccionar varios campos de varias tablas:
+SELECT (tabla1).(columna), (tabla2).(columna),... FROM (tabla1), (tabla2),...;											[(tabla).(columna)]
+
+
+
+------------------------------------INSERTAR REGISTRO EN TABLA--------------------------------------------------
+
+Insertar algun registro en tabla: 
+	INSERT INTO (nombre tabla) VALUES ('(valor columna 1)', '(valor columna 2)',...);									[INSERT INTO]
+Insertar mas de un registro en tabla: 
+	INSERT INTO (nombre tabla) VALUES ('(valor columna 1)', '(valor columna 2)',...), ('(valor columna 1)', '(valor columna 2)',...), ...;
+Insertar registro con valores en especifico
+	INSERT INTO (nombre tabla) ('(columna1)', '(columna2)',...) VALUES ('(valor 1)', '(valor2)',....);					[VALORES ESPECIFICOS]
+Cargar registros desde un archivo: 
+	LOAD DATA LOCAL INFILE '(Direccion del archivo)' INTO TABLE (nombre tabla);											[LOAD DATA]
+Cargar registros desde un archivo, especificando lista de columnas:
+	LOAD DATA LOCAL INFILE '(Direccion del archivo)' INTO TABLE (nombre tabla) (col1, col2,...);						[LOAD DATA, (col1, col2,..)]
+Cambiar separador y salto de linea: 
+	LOAD... FIELDS TERM INATED BY '(separador que se ocupo)' LINES TERMINATED BY '(terminacion ej. \n)';				[FIELDS TERM INATED BY]
+Copiar datos de una tabla e insertarlos en otra:
+	INSERT INTO (nombre Tabla) (columnas) SELECT (consulta);															[INSERT INTO, SELECT]
+Insertar un valor blobl en un campo:
+	UPDATE (nombre Tabla) SET (columna) = Load_file('(ruta en donde se encuntra)');										[Load_file()]
+
+
+
+-------------------------------------FUNCIONES AGREGADAS (principales)-------------------------------------------
+
+Funcion count(): Nos permite contar registros
+	SELECT COUNT((columnas)) FROM (nombre tabla);																		[COUNT()]
+Funcion count() con DISTINCT: Nos devuelve el numero de registros sin repetir valores
+	SELECT COUNT(DISTINCT (nombreColumna)) FROM (nombre Tabla);															[COUNT(DISTINCT)]
+FUNCION count() con condicion:
+	SELECT COUNT((columnas)) FROM (SELECT (columnas) FROM (nombreTabla) WHERE (condicion)) AS (nombreAlias);			[(Seleccion), AS]
+Funcion grou by: Nos permite agrupar una busqueda de acuerdo a una Columna:
+	SELECT (columnas) FROM (nombre Tabla) GROUP BY (columna);															[GROUP BY]
+FUNCION max(): Nos retorna el valor maximo que hay en una columna
+	SELECT MAX((columna)) FROM (nombre Tabla);																			[MAX()]
+FUNCION min(): Nos retorna el valor minimo que hay en una columna
+	SELECT MIN((columna)) FROM (nombre Tabla);																			[MIN()]
+FUNCION sum(): Nos devuelve la suma de todos los valores de la columna que indiquemos
+	SELECT SUM((columna)) FROM (nombre Tabla);																			[SUM()]
+FUNCION sum() con DISTINCT: Nos devuelve la suma de todos los valores sin repetir
+	SELECT SUM(DISTINCT (columna)) FROM (nombre Tabla);																	[SUM(DISTINCT)]
+FUNCION avg(): Nos devuelve el promedio de los valores de la columna que indiquemos
+	SELECT AVG((columna)) FROM (nombre Tabla);																			[AVG()]
+FUNCION curdate(): Nos devuelve la fecha actual
+	INSERT INTO (nombre Tabla) VALUES (CURDATE());																		[CURDATE()]
+FUNCION LAST_INSERT_ID(): Devuelve el ultimo id que se genero o se inserto
+	INSERT INTO (nombre tabla) VALUES (LAST_INSERT_ID());																[LAST_INSERT_ID()]
+Buscar dentro de un campo fulltext:
+	SELECT (columnas) FROM (nombre Tabla) WHERE Match (columnaFullText) AGAINST ('palabra o valor');					[Match(), AGAINST()]
+
+
+
+----------------------------------- MODIFICAR REGISTROS --------------------------------------------------------------
+
+Modificar todos los registros de una columna
+	UPDATE (nombre Tabla) SET (columna) = (valor);																		[UPDATE, SET]
+Modificar con una condiciones
+	UPDATE (nombre Tabla) SET (Columna) = (valor) WHERE (columna) = '(valor)' AND (columna) = '(valor)';				[UPDATE WHERE, AND OR <, etc]
+
+
+--------------------------------- ELIMINAR INFORMACION ------------------------------------------------------------------
+
+Eliminar todos los registros de la tabla
+	DELETE FROM (nombre Tabla);																							[DELETE]
+Eliminar una tabla
+	DROP TABLE (nombre Tabla);																							[DROP TABLE]
+Eliminar base de datos
+	DROP DATABASE (nombre Base De Datos); 																				[DROP DATABASE]
+Eliminar registros de una tabla
+	DELETE FROM (nombre Tabla) WHERE (columna) = '(valor)';																[DELETE, WHERE]
+
+
+------------------------------- MODIFICAR ESTRUCUTURA DE TABLA  -------------------------------------------------------
+
+Agregar una nueva columna
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato);												[ALTER TABLE, ADD]
+Agregar columna en lugar especifico
+	ALTER TABLE (nombre Tabla) ADD (nombreColumna nueva) (tipo de dato) AFTER (columna);								[AFTER]
+Cambiar nombre de tabla:
+	ALTER TABLE (nombre TAbla) RENAME TO  (nuevo nombre);																[RENAME TO]
+Eliminar alguna columna
+	ALTER TABLE (nombre Tabla) DROP COLUMN (columna1), (columna 2), ...;												[DROP COLUMN]
+Renombrar columna:
+	ALTER TABLE (nombre Tabla) RENAME COLUMN (columna) TO (nuevo nombre Columna);										[RENAME COLUMN, TO]
+Modificar tipo de dato de columna:
+	ALTER TABLE (nombre Tabla) MODIFY COLUMN (columna) (nuevo tipo de dato);											[MODIFY COLUMN]
+
+-------------------------------- VALORES ENUM Y SET -------------------------------------------------------------------------
+
+Tipo de valor ENUM:
+	CREATE TABLE  (nombre Tabla) ((columna1) (tipoValor), (columna2) ENUM('(valor1', '(valor2)', '(valor3)',...),..);	[ENUM()]
+Tipo de valor SET:
+		CREATE TABLE  (nombre Tabla) ((columna1) (tipoValor), (columna2) SET('(valor1', '(valor2)', '(valor3)',...),..);[SET()]
+insercion con un valor del ENUM o SET:
+	INSERT INTO (nombre Tabla) (columna) VALUES ('(valor1)');															[INSERT, ('(valor1)')]
+insercion con el indice de un valor del ENUM o SET:
+	INSERT INTO (nombre Tabla) (columna) VALUES ('(indice)');															[INSERT, ('(indice)')]
+insercion de mas de un valor del SET:
+	INSERT INTO (nombre Tabla) (columna) VALUES ('(valor1, valor2,...)');												[INSERT, ('(valor1, valor2,..')]
+
+
+------------------------------ VARAIBLES TEMPORALES -------------------------------------------------------------------
+
+Crear una variable temporal:
+	SET @(nombre Varaible) = '(valor)';																					[SET @(Variable)]
+Crear una variable temporal a partir de una consulta
+	SELECT @(nombreVariable) := (consulta);																				[@(Variable) :=]
+Utilizar una variable temporal
+	SELECT (columas) FROM (nombre Tablas) WHERE (columna) < @(nombreVariable);											[WHERE, @(variable)]
+Consultar el valor de una variable
+	SELECT @(nombre Variable);																							[SELECT @(Variable)]
+
+---------------------------- EXPORTAR BASES DE DATOS Y TABLAS (consola) ---------------------------------------------------------
+
+Volcado de datos de toda una base de datos:
+	mysqldump -u (usuario) -p (baseDeDatos) > "(ruta con nombre de archivo a crear)"									[mysqldump]
+Volcado de datos de todas las bases de datos:
+	mysqldump -u (usaurio) -p --all-databases > "(ruta con nombre de archivo a crear)"									[mysqldump, --all-databases]
+Volcado de datos de bases de datos determinadas:
+	mysqldump -u (usaurio) -p --databases (db1) (db2) (db3).. > "(ruta con nombre de archivo a crear)"					[mysqldump, --databases]
+Volcado de datos de tablas en especifico de una base de datos
+	mysqldump -u (usaurio) -p (baseDeDatos) (tabla1) (tabla2)..> "(ruta con nombre de archivo a crear)"					[mysqldump, (baseDeDatos) (tablas)]
+
+
+---------------------------- TRANSACCIONES ---------------------------------------------------------------------------------------
+
+Bloqueo de tabla para escritura
+	LOCK TABLES '(nombre Tabla)' WRITE;																					[LOCK TABLES, WRITE]
+Bloqueo de tabla para lectura:	
+	LOCK TABLES '(nombre Tabla)' READ;																					[LOCK TABLES, READ]
+Desbloqueo de tablas:
+	UNLOCK TABLES;																										[UNLOCK TABLES]
+Modificar autocommit:
+	SET autocommit = (0 o OFF para desabilitar, 1 o ON para habilitar)													[SET autocommit]
+Iniciar transaccion:
+	BEGIN; o START TRANSACTION;																							[BEGIN o START TRANSACTION]
+Hacer rollback de los cambios:
+	ROLLBACK;																											[ROLLBACK]
+Finalizar transaccion:
+	COMMIT;																												[COMMIT]
+
+-----------------------------------	PROCEDIMIENTOS ALMACENADOS ---------------------------------------------------------------
+
+Establecer nuevo delimitador
+		DELIMITER (delimitador, ej. //)																					[DELIMITER]
+Crear procedimiento:
+	CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) ()															[CREATE PROCEDURE]
+Crear procedimiento con entradas:
+	CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (IN (entrada) (tipo dato), IN (entrada) (tipo Dato),...,)		[CREATE PROCEDURE, IN]
+Crear procedimiento con salida:
+	CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (OUT (salida) (tipo dato))									[CREATE PROCEDURE, OUT]
+Crear procedimiento con un parametro de salida entrada:
+	CREATE PROCEDURE (baseDeDatos).(nombre Procedimiento) (INOUT (salida) (tipo dato))									[CREATE PROCEDURE, INOUT]
+Guardar dato a salida de procedimiento
+	SELECT (columna, ej count()) INTO (salida) FROM ...;																[INTO]
+Iniciar Procedimiento:
+	BEGIN																												[BEGIN]
+Declarar un parametro interno
+	DECLARE (nombreParametro) (tipoDeDat);																				[DECLARE]
+Terminar procedimiento:
+	END;																												[END]
+Llamar a un procedimiento
+	CALL (nombre procedimiento) ((entradas o salidas))																	[CALL]
+
+
+-----------------------------	FUNCIONES ALMACENADAS ---------------------------------------------------------------------
+
+Crear una funcion almacenada:
+	CREATE FUNCTION (baseDeDatos).(nombreFuncion) ((entrada1) (tipoValor),..) RETURNS (tipoValor) DETERMINISTIC/NOT DET..;[CREATE FUNCTION, RETURNS]
+Iniciar funcion almacenada:
+	BEGIN 																												[BEGIN]
+Declarar una variable interna:
+	DECLARE (nombreVariable) (tipoDato);																				[DECLARE]
+Especificar valor a retornar:
+	RETURN (valor);																										[RETURN]
+Terminar funcion Almacenada:
+	entrada1																											[END]
+Llamar una funcion almacenada:
+	(nombre Variable)((parametros))	
+
+
+---------------------------------	VISTAS -------------------------------------------------------------------------------
+
+Crear una vista:
+	CREATE VIEW (nombre Vista) AS (consulta)																			[CREATE VIEW, AS]
+
+
+-----------------------------------	TRIGGERS o EVENTOS ------------------------------------------------------------------
+
+Crear un Trigger o Disparador:
+	CREATE TRIGGER (nombre trigger) (AFTER o BEFORE) (INSERT, UPDATE, DELETE) ON (nombre Tabla) FOR EACH ROW 			[CREATE TRIGGER]
+Empezar procemiento que se ejecutara al cumplirse el disparador
+	BEGIN																												[BEGIN]
+Terminar procemiento que se ejecutara al cumplirse el disparador
+	END 																												[END]
+
+
+------------------------------------ IF ELSE -------------------------------------------------------------------------------
+
+	Inicio de un bloque if:
+		IF (condicion) THEN														[IF, THEN]
+	Bloque ELSEIF:
+		ELSEIF (condicion) THEN													[ELSEIF, THEN]
+	BLOQUE ELSE:
+		ELSE 																	[ELSE]
+	Fin bloque if:	
+		END IF 																	[END IF]
+
+------------------------------------- BUCLES -------------------------------------------------------------------------------
+
+	Declarar un objeto a recorrer:
+		DECLARE (nombre) CURSOR FOR (consulta, registros que va a recorrer);											[DELCARE, CURSOR FOR]
+	Iniciar bucle
+		OPEN (objeto iterable);																							[OPEN]
+	utilizar un bucle o loop:
+		(objeto iterable): LOOP																							[LOOP]
+	Obtener un registro del objeto iterable:
+		FETCH (objeto iterable) INTO (columnas Tabla a insertar valor del registro);									[FETCH, INTO]
+	Romper bucle:
+		LEAVE (objeto iterable)																							[LEAVE]
+	Finalizar loop:
+		END LOOP;																										[END LOOP]

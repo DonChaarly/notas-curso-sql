@@ -1,0 +1,85 @@
+
+				TRANSACCIONES
+
+	Una transaccion es un intercambio de informacion entre dos puntos y modificacion
+	Como punto principal de las transaccines, debe completarse el proceso
+	Si algo ocurre en medio que impida que esto se realice, se hacer rollback
+	de los cambios
+
+
+				TRANSACCIONES EN MYSQL
+
+	BEGGIN (o START TRANSACTION): Para empezar una transaccion se coloca el comando BEGIN; antes de las sentencias a ejecutarse							
+	COMMIT: Para finalizar una transaccion se coloca el comando COMMIT; despues de las sentencias a ejecutar
+	SET autocommit: Tambien se debe colocar el comando SET autocommit = 0; tambien se puede colocar OFF
+		Esto debido a que por defecto mysql al ejecutarse una sentencia, lo hace de forma irreversible por el autocommit
+		por ello es importarte desactivarlo antes de iniciar una transaccion
+		Una vez hecha terminada la transaccion, se puede colocar el autocommit en 1 o ON nuevamente
+	ROLLBACK: Antes de hacer commit, se puede colocar el comando ROLLBACK; esto va a deshacer todas las sentencias que se ejecutaron
+
+					SINTAXYS:
+	Modificar autocommit:
+		SET autocommit = (0 o OFF para desabilitar, 1 o ON para habilitar)								[SET autocommit]
+	Iniciar transaccion:
+		BEGIN; o START TRANSACTION;																		[BEGIN o START TRANSACTION]
+	Hacer rollback de los cambios:
+		ROLLBACK;																						[ROLLBACK]
+	Finalizar transaccion:
+		COMMIT;																							[COMMIT]
+
+			BLOQUEO DE TABLAS
+
+	Se puede bloquear la tabla para escritura o lectura, esto para que no haya errores en la tabla mientras se hace alguna transaccion
+	para que ningun otro subproceso modifique registros mientras lo estas haciendo tu
+
+					SINTAXYS
+	Bloqueo de tabla para escritura
+		LOCK TABLES '(nombre Tabla)' WRITE;																[LOCK TABLES, WRITE]
+	Bloqueo de tabla para lectura:	
+		 LOCK TABLES '(nombre Tabla)' READ;																[LOCK TABLES, READ]
+	Desbloqueo de tablas:
+		UNLOCK TABLES;																					[UNLOCK TABLES]
+
+			EJEMPLO DE TRNSACCION
+
+	LOCK TABLES '(nombre Tabla)' WRITE;
+	SET autocommit = 0;															
+	BEGIN;
+	(sentecias..
+		...
+		(puede provocarse un ROLLBACK entremedio)
+		...)
+	COMMIT;
+	SET autocommit = 1;
+	UNLOCK TABLES;
+
+
+
+						TRANSACCIONES EN SQLite
+	En sqlite no es necesario colocar el autocommit en 0 ya que solamente colocando beggin transaction, ya todos los cambios
+	en tablas pueden ser reversibles antes el commit
+
+	BEGGIN TRANSACTION: Para empezar una transaccion se coloca el comando BEGIN; antes de las sentencias a ejecutarse	
+	ROLLBACK: Antes de hacer commit, se puede colocar el comando ROLLBACK; esto va a deshacer todas las sentencias que se ejecutaron
+	COMMIT: Para finalizar una transaccion se coloca el comando COMMIT; despues de las sentencias a ejecutar
+
+
+				SINTAXYS
+	Iniciar transaccion:
+		BEGIN TRANSACTION;																				[BEGIN TRANSACTION]
+	Hacer rollback de los cambios:
+		ROLLBACK;																						[ROLLBACK]
+	Finalizar transaccion:
+		COMMIT;																							[COMMIT]
+
+
+			EJEMPLO DE TRNSACCION
+														
+	BEGIN TRANSACTION;
+	(sentecias..
+		...
+		(puede provocarse un ROLLBACK entremedio)
+		...)
+	COMMIT;
+
+

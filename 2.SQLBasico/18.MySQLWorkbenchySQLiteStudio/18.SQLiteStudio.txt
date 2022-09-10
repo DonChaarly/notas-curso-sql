@@ -1,0 +1,69 @@
+
+		AGREGAR DATABASE
+Click en la pestana superior database
+ADD a database
+Se da click en el icono de la carpeta para buscar la base de datos
+Se da click en ok
+
+		CREAR DATABASE
+Click en la pestana superior database
+ADD a database
+Se da click en el icono de +
+Se abre el buscardor de archivos en la barra de Nombre se coloca el nombre de la base de datos
+Se da click en ok
+
+		BOTONES DE ACCIONES
+Conectar a la base de datos
+Desconectar a la base de datos
+Agregar base de datos
+Refrescar base de datos
+Crear una tabla
+Crear una vista
+Abrir un SCRIPT o Query para colocar sentencias SQL
+Importar  exportar tablas
+
+
+		SCRIPT O QUERY
+Todas las sentencias que se ejeucten se aplicaran a la 
+base de datos a la que se este conectado
+Para ejecutar sentencias se tiene que colocar el cursor desde la sentencia que se quiere ejecutar
+	y se da click en el boton de play 
+
+
+		CREAR TABLA UTILIZANDO LA INTERFAZ GRAFICA
+Click derecho en tables
+Create table
+Se coloca el nombre de la tabla
+Si se marca WITHOUT ROWID se evita que se cree la llave primaria que SQLite tiene por defecto
+Para agregar una columan se da click en add column en el boton de arribita
+Aparece una ventana en donde se puede configurar la definicion de la columna y los atributos que se marquen
+Para configura la llave foranea
+	Se establece la tabla a la que se esta referenciando
+	El campo que se esta referenciando
+	Se puede configurar que pasa al actualizar y al eliminar
+	Se le puede colocar tambien un nombre para que se indexe mejor
+Para modificar una columan se tiene que seleccionar y dar click en el boton de Edit column
+Para que se genere el codigo SQL se da click en el boton de la flechita Commit Structure
+
+
+
+	En SQLite Studio no se tiene algo para generar un diagrama por eso nos apoyamos en WorkBench
+
+
+        IMPORTACION Y EXPORTACION DE DATOS
+
+Se tiene los botones de imoprt y export en la seccino de botones de accion
+Para la importacion:
+    Se elige que base de datos se va a afectar
+    Se elige la tabla en donde se agregara la informacion
+    Se elige el formato del archivo
+    En input file se busca el archivo a importar
+    Se elige cual es la codificacion del texto
+    Se puede marcar si la primera linea de las filas representan las columnas o no
+    Se elige el separador el cual puede ser comma, / , | etc.
+
+Para exportacionÑ 
+	Se da click sobre el boton de exportacion, 
+	Se elige que se queire exportar
+	Se llenan los campos que interesen
+	Se guaurda en la ruta que se queira

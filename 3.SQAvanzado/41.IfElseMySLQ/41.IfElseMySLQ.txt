@@ -1,0 +1,16 @@
+
+
+
+			IF ELSE
+	MySQL tambien cuenta con las sentencias IF ELSE como en un lenguaje de programacion
+
+
+	SINTAXYS
+	Inicio de un bloque if:
+		IF (condicion) THEN														[IF, THEN]
+	Bloque ELSEIF:
+		ELSEIF (condicion) THEN													[ELSEIF, THEN]
+	BLOQUE ELSE:
+		ELSE 																	[ELSE]
+	Fin bloque if:	
+		END IF 																	[END IF]

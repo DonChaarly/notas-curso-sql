@@ -1,0 +1,20 @@
+
+				
+
+				BUCLES EN MYSQL
+		En mysql tambien se tiene bucles como el los lenguajes de programacion
+
+
+		SINTAXYS
+	Declarar un objeto a recorrer:
+		DECLARE (nombre) CURSOR FOR (consulta, registros que va a recorrer);									[DELCARE, CURSOR FOR]
+	Iniciar bucle
+		OPEN (objeto iterable);																					[OPEN]
+	utilizar un bucle o loop:
+		(objeto iterable): LOOP																					[LOOP]
+	Obtener un registro del objeto iterable:
+		FETCH (objeto iterable) INTO (columnas Tabla a insertar valor del registro);							[FETCH, INTO]
+	Romper bucle:
+		LEAVE (objeto iterable)																					[LEAVE]
+	Finalizar loop:
+		END LOOP;																								[END LOOP]

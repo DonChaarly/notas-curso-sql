@@ -1,0 +1,36 @@
+------------------------------------INSERTAR REGISTRO EN TABLA--------------------------------------------------
+
+Insertar mas de un registro en tabla: 
+	INSERT INTO (nombre tabla) VALUES ('(valor columna 1)', '(valor columna 2)',...), ('(valor columna 1)', '(valor columna 2)',...), ...;
+
+
+---------------------------- CARGAR REGISTROS DESDE UN ARCHIVO en MYSQL----------------------------------
+
+En los archivos las columnas deben estar separadas por tabulacion
+y cada fila esta ingresada en una linea, si esto no es asi se especifica despues del LOAD... FIELDS TERM INATED BY '(separador que se ocupo)' LINES TERMINATED BY '(terminacion ej. \n)';
+
+Cargar registros desde un archivo:
+	LOAD DATA INFILE '(Direccion del archivo)' INTO TABLE (nombre tabla);														[LOAD DATA INFILE]
+
+Se tuvieron problemas
+Se soluciono colocando el archivo a importar dentro de la ruta de importacion exportacion segura de archivos la
+cual se especifica en el archivo my.ini el cual se encontro en.. C:\ProgramData\MySQL\MySQL Server 8.0
+Tambien en la consola se especifico SET GLOBAL local_infile=1;
+Tambien se tuvo que configurar la conexion root en MySQL workbench
+	click derecho, edit conection
+	advanced
+	en others colocar: OPT_LOCAL_INFILE=1
+
+al acceder con el usuario en consola se tiene que especificar --local-infile=1
+	ej. mysql --local-infile=1 -u admin -p
+
+La ruta para colocar el archivo es esta: "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads"
+
+
+---------------------------- CARGAR REGISTROS DESDE UN ARCHIVO en SQLite----------------------------------
+
+En los archivos las columnas deben estar separadas ','
+y cada fila esta ingresada en una linea
+
+Si la tabla a la que vamos a imprtar los registros ya existe, entonces el archivo no tiene que tener cabezales
+Si la tabla no existiera en la primera linea se colocan los nombres de los cabezales
